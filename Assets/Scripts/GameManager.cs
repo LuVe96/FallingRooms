@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public bool playerHasWon = false;
+
     public static GameManager Instance = null;
 
     private void Awake()

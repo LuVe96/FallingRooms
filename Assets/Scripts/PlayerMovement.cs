@@ -50,10 +50,11 @@ public class PlayerMovement : MonoBehaviour
             transform.position += new Vector3(0, 0, playerSpeedWD);
         }
 
-        if (movmentVector.x != 0 && movmentVector.y != 0)
+        if (movmentVector.x != 0 || movmentVector.y != 0)
         {
             var rotation = Quaternion.LookRotation(new Vector3(movmentVector.x, 0, movmentVector.y));
-            playerModel.transform.rotation = Quaternion.RotateTowards(playerModel.transform.rotation, rotation, 30f);
+            playerModel.transform.rotation = Quaternion.RotateTowards(playerModel.transform.rotation, rotation, 10f);
+
         }
 
     }
