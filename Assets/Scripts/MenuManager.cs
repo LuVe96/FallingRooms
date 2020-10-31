@@ -17,11 +17,17 @@ public class MenuManager : MonoBehaviour
         {
             transform.Find("WinMenu").gameObject.SetActive(true);
         }
+
+        if (GameManager.Instance.playerIsDead)
+        {
+            transform.Find("LooseMenu").gameObject.SetActive(true);
+        }
     }
 
 
     public void Restart()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        GameManager.Instance.OnRestart();
     }
 }

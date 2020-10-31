@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     public bool playerHasWon = false;
+    public bool playerIsDead = false;
 
     public static GameManager Instance = null;
 
@@ -32,5 +33,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnRestart()
+    {
+        playerHasWon = false;
+        playerIsDead = false;
     }
 }
