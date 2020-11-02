@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CallerTrigger : MonoBehaviour
+public class PlayerEnterTrigger : MonoBehaviour
 {
 
     public bool triggered { get; private set; } = false;
