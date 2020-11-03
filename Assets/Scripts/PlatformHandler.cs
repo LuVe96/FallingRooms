@@ -16,7 +16,6 @@ public class PlatformHandler : MonoBehaviour
     public float frequenzTime = 0.5f;
     private float frequenzTimeSum = 0;
 
-
     private void Start()
     {
         random = UnityEngine.Random.Range(5, 8);
@@ -57,7 +56,6 @@ public class PlatformHandler : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
         }
-
     }
 
     private void ToggleMaterial()
