@@ -21,7 +21,6 @@ public class ArrowHandler : MonoBehaviour
         }
         else
         {
-            Debug.Log("4");
             transform.LookAt(new Vector3(keyGoal.position.x, 3, keyGoal.position.z));
             GetComponent<MeshRenderer>().material = keyGoalMaterial;
         }
