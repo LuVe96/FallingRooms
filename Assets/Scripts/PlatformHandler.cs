@@ -13,6 +13,8 @@ public class PlatformHandler : MonoBehaviour
     public float warningTime = 2;
     private bool warnMaterialIsActive = false;
 
+    [HideInInspector]
+    public bool isFalling = false;
     public float frequenzTime = 0.5f;
     private float frequenzTimeSum = 0;
 
@@ -56,6 +58,7 @@ public class PlatformHandler : MonoBehaviour
             // hexagon is falling
             if (timeSum >= random)
             {
+                isFalling = true;
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
                 deltionTimeSum += Time.deltaTime;
