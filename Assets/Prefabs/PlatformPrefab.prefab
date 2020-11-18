@@ -335,7 +335,7 @@ Transform:
   m_GameObject: {fileID: 8825348397294777162}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99, y: 0.99, z: 0.99}
   m_Children:
   - {fileID: 9075693223004749721}
   - {fileID: 8825348396723166012}
@@ -377,6 +377,7 @@ MonoBehaviour:
   redMaterial: {fileID: 2100000, guid: 826bcfa4405fe574f91e7723e0472ee3, type: 2}
   warningTime: 3
   frequenzTime: 0.5
+  deletionTime: 5
 --- !u!1001 &6719606455610832739
 PrefabInstance:
   m_ObjectHideFlags: 0

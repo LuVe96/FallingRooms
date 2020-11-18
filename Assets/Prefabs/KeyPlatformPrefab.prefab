@@ -783,6 +783,7 @@ MonoBehaviour:
   redMaterial: {fileID: 2100000, guid: 826bcfa4405fe574f91e7723e0472ee3, type: 2}
   warningTime: 3
   frequenzTime: 0.5
+  deletionTime: 5
 --- !u!1 &4493347652964200154
 GameObject:
   m_ObjectHideFlags: 0

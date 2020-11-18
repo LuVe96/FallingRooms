@@ -16,6 +16,9 @@ public class PlatformHandler : MonoBehaviour
     public float frequenzTime = 0.5f;
     private float frequenzTimeSum = 0;
 
+    public float deletionTime = 10f;
+    private float deltionTimeSum = 0;
+
     private void Start()
     {
         random = UnityEngine.Random.Range(5, 8);
@@ -54,7 +57,21 @@ public class PlatformHandler : MonoBehaviour
             if (timeSum >= random)
             {
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
+                deltionTimeSum += Time.deltaTime;
+
+                if(deltionTimeSum >= 0.5f)
+                {
+                    transform.localScale *= 0.997f;
+                }
+                Debug.Log(deletionTime);
+                if(deltionTimeSum >= deletionTime)
+                {
+                    Destroy(gameObject);
+                }
             }
+
+
         }
     }
 
