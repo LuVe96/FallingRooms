@@ -64,7 +64,6 @@ public class PlatformHandler : MonoBehaviour
                 {
                     transform.localScale *= 0.997f;
                 }
-                Debug.Log(deletionTime);
                 if(deltionTimeSum >= deletionTime)
                 {
                     Destroy(gameObject);
