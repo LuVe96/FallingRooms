@@ -63,10 +63,9 @@ public class PlatformHandler : MonoBehaviour
 
                 deltionTimeSum += Time.deltaTime;
 
-                if(deltionTimeSum >= 0.5f)
-                {
-                    transform.localScale *= 0.997f;
-                }
+                
+                transform.localScale *= 0.997f;
+                
                 if(deltionTimeSum >= deletionTime)
                 {
                     Destroy(gameObject);
