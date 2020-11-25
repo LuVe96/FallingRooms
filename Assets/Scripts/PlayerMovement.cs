@@ -65,7 +65,8 @@ public class PlayerMovement : MonoBehaviour
         //    newRigidbodyVelocity = new Vector3(newRigidbodyVelocity.x, rigidbody.velocity.y, playerSpeed);
         //}
 
-        newRigidbodyVelocity = (new Vector3(movmentVector.x, 0, movmentVector.y).normalized * playerSpeed * 10 * Time.deltaTime) + new Vector3(0, rigidbody.velocity.y, 0); ;
+        newRigidbodyVelocity = (new Vector3(movmentVector.x, 0, movmentVector.y).normalized * playerSpeed ) 
+            + new Vector3(0, rigidbody.velocity.y, 0); 
 
         if (movmentVector.x != 0 || movmentVector.y != 0)
         {
