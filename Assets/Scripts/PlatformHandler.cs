@@ -12,6 +12,7 @@ public class PlatformHandler : MonoBehaviour
     public Material redMaterial;
     public float warningTime = 2;
     private bool warnMaterialIsActive = false;
+    public float timeToLive = 7;
 
     [HideInInspector]
     public bool isFalling = false;
@@ -45,7 +46,7 @@ public class PlatformHandler : MonoBehaviour
         {
             timeSum += Time.deltaTime;
 
-            if (timeSum >= (random - warningTime))
+            if (timeSum >= (timeToLive - warningTime))
             {
                 frequenzTimeSum += Time.deltaTime;
                 if (frequenzTimeSum >= frequenzTime)
@@ -56,7 +57,7 @@ public class PlatformHandler : MonoBehaviour
             }
 
             // hexagon is falling
-            if (timeSum >= random)
+            if (timeSum >= timeToLive)
             {
                 isFalling = true;
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
