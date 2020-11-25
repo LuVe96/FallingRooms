@@ -11,11 +11,16 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerModel;
     private Rigidbody rigidbody;
 
+    private Animator animator;
+
 
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
         rigidbody = GetComponent<Rigidbody>();
+
+
+        animator = transform.Find("Astronaut").GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -66,7 +71,11 @@ public class PlayerMovement : MonoBehaviour
         {
             var rotation = Quaternion.LookRotation(new Vector3(movmentVector.x, 0, movmentVector.y));
             playerModel.transform.rotation = Quaternion.RotateTowards(playerModel.transform.rotation, rotation, 10f);
+            animator.SetBool("isWalking", true);
 
+        } else
+        {
+            animator.SetBool("isWalking", false);
         }
 
         rigidbody.velocity = newRigidbodyVelocity;
