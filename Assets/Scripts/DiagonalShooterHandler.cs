@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ public class DiagonalShooterHandler : MonoBehaviour
 
     public GameObject BulletPrefab;
     public float shootingFrequenz = 0.5f;
-    public float shootingFrequenzSum = 0;
+    private float shootingFrequenzSum = 0;
 
     private ArrayList diagonals = new ArrayList();
 
@@ -56,7 +57,7 @@ public class DiagonalShooterHandler : MonoBehaviour
         Transform d2 = diagonale.transform.GetChild(1);
 
         var bullet = Instantiate(BulletPrefab);
-        bullet.transform.position = d1.transform.position + d1.transform.forward;
+        bullet.transform.position = d1.transform.position + new Vector3(0,1,0);
         bullet.GetComponent<DiagonalShooterBullet>().Shoot(d2.position - d1.position);
 
 

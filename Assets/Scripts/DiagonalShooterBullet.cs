@@ -8,6 +8,7 @@ public class DiagonalShooterBullet : MonoBehaviour
     public float TimeToLive = 2;
 
     private float timeToLiveSum = 0;
+    public float force = 4000;
 
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class DiagonalShooterBullet : MonoBehaviour
 
     public void Shoot(Vector3 direction)
     {
-        GetComponent<Rigidbody>().AddForce(direction.normalized * 4000);
+        GetComponent<Rigidbody>().AddForce(direction.normalized * force);
     }
 
     private void OnCollisionEnter(Collision collision)

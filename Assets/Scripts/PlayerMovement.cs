@@ -36,7 +36,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.Find("Main Camera").GetComponent<OverviewHandler>().inOverview) return;
+        if (transform.Find("Main Camera").GetComponent<OverviewHandler>().inOverview)
+        {
+            animator.SetBool("isWalking", false);
+            return;
+        }
 
         float playerSpeedWD = playerSpeed * Time.deltaTime;
         Vector2 movmentVector = playerInputActions.Player.Move.ReadValue<Vector2>();
