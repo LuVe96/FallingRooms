@@ -210,7 +210,7 @@
                 {
                     "name": "",
                     "id": "27a38687-7c0b-440f-a4fa-306eabed308f",
-                    "path": "<HID::Logitech Logitech Dual Action>/button2",
+                    "path": "<Joystick>/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",

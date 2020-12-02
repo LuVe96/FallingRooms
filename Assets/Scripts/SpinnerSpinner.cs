@@ -14,6 +14,8 @@ public class SpinnerSpinner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector4(0, 1, 0), ((random == 0) ?  rotationSpeed : -rotationSpeed) * Time.deltaTime);
+        transform.Rotate(new Vector4(0, 1, 0), ((random == 0) ? rotationSpeed : -rotationSpeed) * Time.deltaTime);
+        //Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, rotationSpeed, 0) * Time.deltaTime);
+        //GetComponent<Rigidbody>().MoveRotation(GetComponent<Rigidbody>().rotation * deltaRotation);
     }
 }

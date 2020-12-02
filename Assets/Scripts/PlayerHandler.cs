@@ -60,5 +60,14 @@ public class PlayerHandler : MonoBehaviour
             Destroy(other.gameObject);
             GameObject.Find("KeyPanel").GetComponent<KeyPanel>().UpdateKeys(currentKeysCount);
         }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.tag == "RagdollActivator")
+        {
+            GetComponentInChildren<RagdollHandler>().DoRagdoll(true);
+        }
     }
 }

@@ -36,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.Find("Main Camera").GetComponent<OverviewHandler>().inOverview)
+        if (transform.Find("Main Camera").GetComponent<OverviewHandler>().inOverview ||
+            transform.GetComponentInChildren<RagdollHandler>().isRagdollActive)
         {
             animator.SetBool("isWalking", false);
             return;
