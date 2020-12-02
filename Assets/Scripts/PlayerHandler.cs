@@ -41,14 +41,14 @@ public class PlayerHandler : MonoBehaviour
             }
         }
 
-        if (currentKeysCount < requiredeKeysCount && nearestKey != null)
-        {
-            arrowHandler.setKeyGoal(nearestKey.transform);
-        }
-        else
-        {
-            arrowHandler.setKeyGoal(null);
-        }
+        //if (currentKeysCount < requiredeKeysCount && nearestKey != null)
+        //{
+        //    arrowHandler.setKeyGoal(nearestKey.transform);
+        //}
+        //else
+        //{
+        //    arrowHandler.setKeyGoal(null);
+        //}
 
     }
 
@@ -58,6 +58,7 @@ public class PlayerHandler : MonoBehaviour
         {
             currentKeysCount += 1;
             Destroy(other.gameObject);
+            GameObject.Find("KeyPanel").GetComponent<KeyPanel>().UpdateKeys(currentKeysCount);
         }
     }
 }

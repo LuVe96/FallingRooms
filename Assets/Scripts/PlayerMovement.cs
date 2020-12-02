@@ -43,32 +43,14 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 newRigidbodyVelocity = new Vector3(0, rigidbody.velocity.y, 0);
 
-        //if ( movmentVector.x <= -0.1)
-        //{
-        //    //transform.position += new Vector3(-playerSpeedWD, 0, 0);
-        //    newRigidbodyVelocity = new Vector3(-playerSpeed, rigidbody.velocity.y, newRigidbodyVelocity.z);
-        //}
-        //else if (movmentVector.x >= 0.1)
-        //{
-        //    //transform.position += new Vector3(playerSpeedWD, 0, 0);
-        //    newRigidbodyVelocity = new Vector3(playerSpeed, rigidbody.velocity.y, newRigidbodyVelocity.z);
-        //}
+        if(movmentVector.x > 0.1 || movmentVector.x < -0.1 || movmentVector.y > 0.1 || movmentVector.y < -0.1)
+        {
+            newRigidbodyVelocity = (new Vector3(movmentVector.x, 0, movmentVector.y).normalized * playerSpeed)
+            + new Vector3(0, rigidbody.velocity.y, 0);
+        }
 
-        //if (movmentVector.y <= -0.1)
-        //{
-        //    //transform.position += new Vector3(0, 0, -playerSpeedWD);
-        //    newRigidbodyVelocity = new Vector3(newRigidbodyVelocity.x, rigidbody.velocity.y, -playerSpeed);
-        //}
-        //else if (movmentVector.y >= 0.1)
-        //{
-        //    //transform.position += new Vector3(0, 0, playerSpeedWD);
-        //    newRigidbodyVelocity = new Vector3(newRigidbodyVelocity.x, rigidbody.velocity.y, playerSpeed);
-        //}
 
-        newRigidbodyVelocity = (new Vector3(movmentVector.x, 0, movmentVector.y).normalized * playerSpeed ) 
-            + new Vector3(0, rigidbody.velocity.y, 0); 
-
-        if (movmentVector.x != 0 || movmentVector.y != 0)
+        if(movmentVector.x > 0.1 || movmentVector.x < -0.1 || movmentVector.y > 0.1 || movmentVector.y < -0.1)
         {
             var rotation = Quaternion.LookRotation(new Vector3(movmentVector.x, 0, movmentVector.y));
             playerModel.transform.rotation = Quaternion.RotateTowards(playerModel.transform.rotation, rotation, 10f);
