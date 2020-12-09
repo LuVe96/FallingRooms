@@ -102,7 +102,6 @@ public class RagdollHandler : MonoBehaviour
 
     private void DoInvincibilityMode(bool activated)
     {
-        Debug.Log("Invincibilililility: " + activated);
         //mainCollider.enabled = !activated;
         //foreach (var col in allColliders)
         //{

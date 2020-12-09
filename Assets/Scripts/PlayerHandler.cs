@@ -65,14 +65,13 @@ public class PlayerHandler : MonoBehaviour
         {
             GetComponentInChildren<RagdollHandler>().DoRagdoll(true);
         }
-
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.collider.gameObject.tag == "RagdollActivator")
-    //    {
-    //        GetComponentInChildren<RagdollHandler>().DoRagdoll(true);
-    //    }
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.tag == "RagdollActivator")
+        {
+            GetComponentInChildren<RagdollHandler>().DoRagdoll(true);
+        }
+    }
 }
