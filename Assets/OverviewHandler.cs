@@ -16,6 +16,7 @@ public class OverviewHandler : MonoBehaviour
     public float speedUp = 20;
     public float speedDown = 20;
 
+    //public Transform PlatformsTransform;
 
     void Awake()
     {
@@ -23,6 +24,8 @@ public class OverviewHandler : MonoBehaviour
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Overview.started += Overview_started;
         playerInputActions.Player.Overview.canceled += Overview_canceled;
+
+        //overviewPostition = new Vector3(PlatformsTransform.position.x / 2, overviewPostition.y, PlatformsTransform.position.z + overviewPostition.z);
     }
 
     private void OnEnable()
@@ -54,6 +57,10 @@ public class OverviewHandler : MonoBehaviour
                 {
                     transform.localPosition += new Vector3(0, 0, direction.z * speedUp * Time.deltaTime / divider);
                 }
+                //if (transform.localPosition.x <= overviewPostition.x)
+                //{
+                //    transform.localPosition += new Vector3(direction.x * speedUp * Time.deltaTime / divider, 0, 0);
+                //}
             }
             else
             {
@@ -65,10 +72,12 @@ public class OverviewHandler : MonoBehaviour
                 {
                     transform.localPosition -= new Vector3(0, 0, direction.z * speedDown * Time.deltaTime / divider);
                 }
-
+                //if (transform.localPosition.x >= stdPostion.x)
+                //{
+                //    transform.localPosition -= new Vector3(direction.x * speedUp * Time.deltaTime / divider, 0, 0);
+                //}
             }
         }
-
 
         if (!buttonPressed)
         {

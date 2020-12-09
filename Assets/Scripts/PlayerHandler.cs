@@ -9,7 +9,7 @@ public class PlayerHandler : MonoBehaviour
     public int currentKeysCount { get; private set; } = 0;
 
     private GameObject[] keys;
-    private ArrowHandler arrowHandler;
+    private ArrowHandler arrowHandler; 
 
     // Start is called before the first frame update
     void Start()
@@ -61,13 +61,18 @@ public class PlayerHandler : MonoBehaviour
             GameObject.Find("KeyPanel").GetComponent<KeyPanel>().UpdateKeys(currentKeysCount);
         }
 
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.gameObject.tag == "RagdollActivator")
+        if (other.tag == "RagdollActivator")
         {
             GetComponentInChildren<RagdollHandler>().DoRagdoll(true);
         }
+
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.collider.gameObject.tag == "RagdollActivator")
+    //    {
+    //        GetComponentInChildren<RagdollHandler>().DoRagdoll(true);
+    //    }
+    //}
 }
