@@ -243,7 +243,6 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths:
     - Armature/Root
-    - Armature
     - Armature/Root/Body_Upper
     - Armature/Root/Body_Upper/Head
     - Armature/Root/Body_Upper/Head/Head_end
@@ -267,7 +266,6 @@ ModelImporter:
     - Armature/Root/IK_Foot_Left/IK_Foot_Left_end
     - Armature/Root/IK_Foot_Right
     - Armature/Root/IK_Foot_Right/IK_Foot_Right_end
-    - Player
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16

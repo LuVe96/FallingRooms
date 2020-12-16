@@ -49,18 +49,18 @@ public class RagdollHandler : MonoBehaviour
                 DoRagdoll(false);
                 standUpTimeSum = 0;
             }
-            //if (standUpTimeSum >= standUpTime - 0.1f)
-            //{
-            //    //var dif = postionBevoreRagdoll - rootTransform.position;
-            //    //Debug.Log("SetPlayerPos: " + dif);
-            //    //playerTransform.position += new Vector3(dif.x, 0, dif.z);
-                
-            //    Vector3 animatedToRagdolled = ragdolledHipPosition - animator.rootPosition;
-            //    //Vector3 newRootPosition = transform.position + animatedToRagdolled;
+            if (standUpTimeSum >= standUpTime - 0.1f)
+            {
+                //var dif = postionBevoreRagdoll - rootTransform.position;
+                //Debug.Log("SetPlayerPos: " + dif);
+                //playerTransform.position += new Vector3(dif.x, 0, dif.z);
 
-            //    playerTransform.position += new Vector3(animatedToRagdolled.x, 0, animatedToRagdolled.z);
+                Vector3 animatedToRagdolled = /*ragdolledHipPosition -*/ animator.rootPosition;
+                //Vector3 newRootPosition = transform.position + animatedToRagdolled;
 
-            //}
+                playerTransform.position += new Vector3(animatedToRagdolled.x, 0, animatedToRagdolled.z);
+
+            }
             if (standUpTimeSum >= standUpTime - 0.6f)
             {
 
