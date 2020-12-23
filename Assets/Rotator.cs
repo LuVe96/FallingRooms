@@ -7,6 +7,7 @@ public class Rotator : MonoBehaviour
 
     public float rotationSpeed = 1;
     private int random;
+    private GameObject player = null;
 
     private void Start()
     {
@@ -16,7 +17,30 @@ public class Rotator : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector4(0, 1, 0), ((random == 0) ? rotationSpeed : -rotationSpeed) * Time.deltaTime);
-        //Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, rotationSpeed, 0) * Time.deltaTime);
-        //GetComponent<Rigidbody>().MoveRotation(GetComponent<Rigidbody>().rotation * deltaRotation);
+
+        if (player != null)
+        {
+            player.transform.Find("CameraHolder").rotation = statRot;
+        }
+    }
+
+    Quaternion statRot;
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            other.gameObject.transform.SetParent(transform);
+            statRot = other.transform.Find("CameraHolder").rotation;
+            player = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.transform.SetParent(GameObject.Find("World").transform);
+            player = null;
+        }
     }
 }

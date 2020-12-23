@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Aa]ssets/Skybox add-on/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
