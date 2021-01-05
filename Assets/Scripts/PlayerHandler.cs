@@ -7,14 +7,27 @@ public class PlayerHandler : MonoBehaviour
 
     public int requiredeKeysCount = 3;
     public int currentKeysCount { get; private set; } = 0;
+    public ParticleSystem shockParticle;
+    public float shockDuration;
 
     private GameObject[] keys;
-    private ArrowHandler arrowHandler; 
+    private ArrowHandler arrowHandler;
+    private bool isShocked = false;
+
+    public float invincibilityTime = 3f;
+    private float invincibilityTimeSum = 0f;
+    public SkinnedMeshRenderer skinnedMeshRenderer;
+    private float blinkTimeSum = 0;
+    public Color blinkColor;
+    private Color stdClolor;
+    private bool InvincibilityModeisActive = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
         arrowHandler = GetComponentInChildren<ArrowHandler>();
+        stdClolor = skinnedMeshRenderer.materials[1].color;
     }
 
     // Update is called once per frame
@@ -50,6 +63,49 @@ public class PlayerHandler : MonoBehaviour
         //    arrowHandler.setKeyGoal(null);
         //}
 
+        if (InvincibilityModeisActive)
+        {
+            blinkTimeSum += Time.deltaTime;
+            if (blinkTimeSum >= 0.1f)
+            {
+                if (skinnedMeshRenderer.materials[1].color == stdClolor)
+                {
+                    skinnedMeshRenderer.materials[1].color = blinkColor;
+                    skinnedMeshRenderer.enabled = false;
+                }
+                else
+                {
+                    skinnedMeshRenderer.materials[1].color = stdClolor;
+                    skinnedMeshRenderer.enabled = true;
+
+                }
+                blinkTimeSum = 0;
+            }
+
+            invincibilityTimeSum += Time.deltaTime;
+            if (invincibilityTimeSum >= invincibilityTime)
+            {
+                DoInvincibilityMode(false);
+                invincibilityTimeSum = 0;
+            }
+        }
+
+
+    }
+
+    private void DoInvincibilityMode(bool activated)
+    {
+
+        isShocked = activated;
+        InvincibilityModeisActive = activated;
+        if (!activated)
+        {
+            skinnedMeshRenderer.materials[1].color = stdClolor;
+            skinnedMeshRenderer.enabled = true;
+            blinkTimeSum = 0;
+        }
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,10 +117,30 @@ public class PlayerHandler : MonoBehaviour
             GameObject.Find("KeyPanel").GetComponent<KeyPanel>().UpdateKeys(currentKeysCount);
         }
 
+        if(other.tag == "Shocker" && !isShocked)
+        {
+            
+            StartCoroutine(doShock());
+        }
+
         if (other.tag == "RagdollActivator")
         {
             GetComponentInChildren<RagdollHandler>().DoRagdoll(true);
         }
+    }
+
+    IEnumerator doShock()
+    {
+        shockParticle.gameObject.SetActive(true);
+        GetComponent<PlayerMovement>().setShocked(true);
+        isShocked = true;
+
+        yield return new WaitForSeconds(shockDuration);
+
+        shockParticle.gameObject.SetActive(false);
+        GetComponent<PlayerMovement>().setShocked(false);
+        isShocked = false;
+        DoInvincibilityMode(true);
     }
 
 }

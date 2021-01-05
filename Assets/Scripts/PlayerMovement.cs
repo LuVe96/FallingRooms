@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator animator;
     float distToGround;
+    private float stdPlayerSpeed;
+    private bool isShocked = false;
 
 
     private void Awake()
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         animator = transform.Find("Astronaut").GetComponent<Animator>();
         playerInputActions.Player.Jump.started += Jump_started;
         distToGround = GetComponent<CapsuleCollider>().bounds.extents.y;
+        stdPlayerSpeed = playerSpeed;
     }
 
     private void OnEnable()
@@ -39,6 +42,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (isShocked)
+        {
+            animator.SetBool("isWalking", false);
+            return;
+        }
+
         if (transform.Find("CameraHolder").Find("Main Camera").GetComponent<OverviewHandler>().inOverview ||
             transform.GetComponentInChildren<RagdollHandler>().isRagdollActive)
         {
@@ -88,6 +98,21 @@ public class PlayerMovement : MonoBehaviour
     bool IsGrounded(){
        return Physics.Raycast(playerModel.transform.position, -Vector3.up, 0.1f);
      }
+
+    public void setShocked(bool shocked)
+    {
+        isShocked = shocked;
+        if (shocked)
+        {
+            playerSpeed = 0;
+            animator.SetFloat("ShockedMultiplier", 13);
+        } else
+        {
+            playerSpeed = stdPlayerSpeed;
+            animator.SetFloat("ShockedMultiplier", 1);
+        }
+
+    }
 
     IEnumerator JumpEnding()
     {

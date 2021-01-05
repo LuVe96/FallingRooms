@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - RagdollActivator
+  - Shocker
   layers:
   - Default
   - TransparentFX
