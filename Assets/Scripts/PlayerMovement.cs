@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         if(movmentVector.x > 0.1 || movmentVector.x < -0.1 || movmentVector.y > 0.1 || movmentVector.y < -0.1)
         {
             var rotation = Quaternion.LookRotation(new Vector3(movmentVector.x, 0, movmentVector.y));
-            playerModel.transform.rotation = Quaternion.RotateTowards(playerModel.transform.rotation, rotation, 10f);
+            playerModel.transform.rotation = Quaternion.RotateTowards(playerModel.transform.rotation, rotation, 400f * Time.deltaTime);
             animator.SetBool("isWalking", true);
 
         } else

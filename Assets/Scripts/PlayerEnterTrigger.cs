@@ -21,6 +21,7 @@ public class PlayerEnterTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             triggerExit = true;
+            triggered = false;
         }
     }
 }
