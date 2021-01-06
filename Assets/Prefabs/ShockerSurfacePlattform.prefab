@@ -88489,7 +88489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   middle: {fileID: 2868085992319157457}
   border: {fileID: 2868085992285281976}
-  switchTime: 1
+  switchTime: 1.5
 --- !u!1 &8823448012369605697
 GameObject:
   m_ObjectHideFlags: 0

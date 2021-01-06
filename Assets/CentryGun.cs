@@ -24,7 +24,7 @@ public class CentryGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!playerEnterTrigger.triggered) { return; }
+        if (!playerEnterTrigger.triggeredForSentryGun) { return; }
 
         timeSum += Time.deltaTime;
         if(timeSum >= frequenzTime)
