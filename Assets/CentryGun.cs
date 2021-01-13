@@ -9,7 +9,7 @@ public class CentryGun : MonoBehaviour
     public GameObject bullet;
 
     public float frequenzTime = 1;
-    private float timeSum = 1.5f;
+    public float timeSum = 1.5f;
 
     public Transform gun;
     public PlayerEnterTrigger playerEnterTrigger;

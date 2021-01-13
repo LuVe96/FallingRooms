@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        if (IsGrounded())
+        if (IsGrounded() && !isShocked)
         {
             animator.SetBool("isJumping", true);
             rigidbody_.AddForce(new Vector3(0, 150, 0));
