@@ -112043,8 +112043,8 @@ MonoBehaviour:
   riseVelocity: 10
   stdMaterial: {fileID: 2100000, guid: eeb6a88b98bbeaa449ac361e78deff9a, type: 2}
   redMaterial: {fileID: 2100000, guid: 826bcfa4405fe574f91e7723e0472ee3, type: 2}
-  warningTime: 3
-  timeToLive: 7
+  warningTime: 2
+  timeToLive: 5
   isFalling: 0
   frequenzTime: 0.5
   deletionTime: 5
@@ -112060,7 +112060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8690e06a9bb574db9e49b7d4d02ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationTime: 0.6
+  rotationTime: 0.7
   lasers:
   - {fileID: 7862945886104142818}
   - {fileID: 2006804019876065907}

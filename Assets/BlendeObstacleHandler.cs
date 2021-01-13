@@ -53,15 +53,15 @@ public class BlendeObstacleHandler : MonoBehaviour
 
     IEnumerator MoveWalls(Transform diagonale, float time, bool rise)
     {
-        Transform dia2;
-        if (currentDiagonale + 1 < diagonals.Length)
-        {
-            dia2 = diagonals[currentDiagonale + 1];
-        }
-        else
-        {
-            dia2 = diagonals[0];
-        }
+        //Transform dia2;
+        //if (currentDiagonale + 1 < diagonals.Length)
+        //{
+        //    dia2 = diagonals[currentDiagonale + 1];
+        //}
+        //else
+        //{
+        //    dia2 = diagonals[0];
+        //}
 
         var currentScale = diagonale.localScale;
         var targetScale = rise ? upPos : 0;
@@ -70,20 +70,28 @@ public class BlendeObstacleHandler : MonoBehaviour
         {
             t += Time.deltaTime / time;
             diagonale.localScale = Vector3.Lerp(currentScale, new Vector3 (currentScale.x, currentScale.y, targetScale), t);
-            dia2.localScale = Vector3.Lerp(currentScale, new Vector3(currentScale.x, currentScale.y, targetScale), t);
+            //dia2.localScale = Vector3.Lerp(currentScale, new Vector3(currentScale.x, currentScale.y, targetScale), t);
             yield return null;
         }
 
         wallstate = rise ? WallState.up : WallState.down;
         if (!rise)
         {
-            if (currentDiagonale + 2 < diagonals.Length)
+            if (currentDiagonale + 1 < diagonals.Length)
             {
-                currentDiagonale += 2;
-            } else
+                currentDiagonale += 1;
+            }
+            else
             {
                 currentDiagonale = 0;
             }
+            //if (currentDiagonale + 2 < diagonals.Length)
+            //{
+            //    currentDiagonale += 2;
+            //} else
+            //{
+            //    currentDiagonale = 0;
+            //}
         }
     }
 

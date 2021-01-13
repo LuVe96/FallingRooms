@@ -29,18 +29,18 @@ public class PlatformHandler : MonoBehaviour
 
     void Update()
     {
-        if (gameObject.transform.Find("PlatformElevateTrigger").GetComponent<PlayerEnterTrigger>().triggered)
-        {
-            if (transform.position.y < 0)
-            {
-                transform.position += new Vector3(0, riseVelocity * Time.deltaTime, 0);
-                if (transform.position.y >= 0)
-                {
-                    transform.position += new Vector3(0, -transform.position.y, 0);
-                }
+        //if (gameObject.transform.Find("PlatformElevateTrigger").GetComponent<PlayerEnterTrigger>().triggered)
+        //{
+        //    if (transform.position.y < 0)
+        //    {
+        //        transform.position += new Vector3(0, riseVelocity * Time.deltaTime, 0);
+        //        if (transform.position.y >= 0)
+        //        {
+        //            transform.position += new Vector3(0, -transform.position.y, 0);
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
         if (gameObject.transform.Find("PlatformDropTrigger").GetComponent<PlayerEnterTrigger>().triggered)
         {

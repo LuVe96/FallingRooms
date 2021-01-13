@@ -269,8 +269,8 @@ MonoBehaviour:
   riseVelocity: 10
   stdMaterial: {fileID: 2100000, guid: eeb6a88b98bbeaa449ac361e78deff9a, type: 2}
   redMaterial: {fileID: 2100000, guid: 826bcfa4405fe574f91e7723e0472ee3, type: 2}
-  warningTime: 3
-  timeToLive: 7
+  warningTime: 2
+  timeToLive: 5
   isFalling: 0
   frequenzTime: 0.5
   deletionTime: 5

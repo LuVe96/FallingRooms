@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6904277343540160549, guid: a06e2de78d6e77d49ad9fee6e3dc8b93, type: 3}
-  frequenzTime: 2
+  frequenzTime: 1.7
   gun: {fileID: 3959052030420076783}
   playerEnterTrigger: {fileID: 5971211235590445655}
 --- !u!54 &3959052030441578646
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6904277343540160549, guid: a06e2de78d6e77d49ad9fee6e3dc8b93, type: 3}
-  frequenzTime: 2
+  frequenzTime: 1.7
   gun: {fileID: 3959052032144618535}
   playerEnterTrigger: {fileID: 5971211235590445655}
 --- !u!54 &3959052030620320148
@@ -3100,8 +3100,8 @@ MonoBehaviour:
   riseVelocity: 10
   stdMaterial: {fileID: 2100000, guid: eeb6a88b98bbeaa449ac361e78deff9a, type: 2}
   redMaterial: {fileID: 2100000, guid: 826bcfa4405fe574f91e7723e0472ee3, type: 2}
-  warningTime: 3
-  timeToLive: 7
+  warningTime: 2
+  timeToLive: 5
   isFalling: 0
   frequenzTime: 0.5
   deletionTime: 5
