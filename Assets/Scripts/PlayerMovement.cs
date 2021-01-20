@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource jumpSound;
     public AudioSource jumpEndSound;
+    private bool coliding = false;
 
 
     private void Awake()
@@ -47,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (isFalling) { return; }
+
+        if(!IsGrounded() && coliding) { return; }
 
         if (isShocked)
         {
@@ -139,6 +142,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        coliding = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        coliding = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "FallingTrigger")
@@ -157,6 +170,8 @@ public class PlayerMovement : MonoBehaviour
             //}
         }
     }
+
+   
 
     IEnumerator isDieing()
     {
