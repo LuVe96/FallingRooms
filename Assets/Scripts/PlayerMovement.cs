@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     private float stdPlayerSpeed;
     private bool isShocked = false;
 
+    public AudioSource jumpSound;
+    public AudioSource jumpEndSound;
+
 
     private void Awake()
     {
@@ -87,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded() && !isShocked)
         {
             animator.SetBool("isJumping", true);
+            jumpSound.Play();
             rigidbody_.AddForce(new Vector3(0, 150, 0));
             isJumping = true;
             StartCoroutine(JumpEnding());
@@ -125,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Physics.Raycast(playerModel.transform.position, -Vector3.up, 0.4f) && isFalling)
             {
+                jumpEndSound.Play();
                 animator.SetBool("isJumping", false);
                 isJumping = false;
             }
