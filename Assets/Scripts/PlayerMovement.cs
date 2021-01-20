@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     float distToGround;
     private float stdPlayerSpeed;
     private bool isShocked = false;
+    private bool isFalling = false;
 
     public AudioSource jumpSound;
     public AudioSource jumpEndSound;
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isFalling) { return; }
 
         if (isShocked)
         {
@@ -135,5 +137,31 @@ public class PlayerMovement : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "FallingTrigger")
+        {
+            animator.SetBool("isFalling", true);
+            StartCoroutine(isDieing());
+            isFalling = true;
+            //foreach (var col in GetComponents<Collider>())
+            //{
+            //    col.enabled = false;
+            //}
+
+            //foreach (var col in GetComponentsInChildren<Collider>())
+            //{
+            //    col.enabled = false;
+            //}
+        }
+    }
+
+    IEnumerator isDieing()
+    {
+        Debug.LogWarning("Oh no");
+        yield return new WaitForSeconds(2);
+        GameManager.Instance.playerIsDead = true;
     }
 }
