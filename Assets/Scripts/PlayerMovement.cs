@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource jumpSound;
     public AudioSource jumpEndSound;
     private bool coliding = false;
-
+    private bool mouseMovingPressed = false;
 
     private void Awake()
     {
@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
 
         animator = transform.Find("Astronaut").GetComponent<Animator>();
         playerInputActions.Player.Jump.started += Jump_started;
+        playerInputActions.Player.MouseMove.performed += MouseMove_started;
+        playerInputActions.Player.MouseMove.canceled += MouseMove_started;
         distToGround = GetComponent<CapsuleCollider>().bounds.extents.y;
         stdPlayerSpeed = playerSpeed;
     }
@@ -67,6 +69,14 @@ public class PlayerMovement : MonoBehaviour
         float playerSpeedWD = playerSpeed * Time.deltaTime;
         Vector2 movmentVector = playerInputActions.Player.Move.ReadValue<Vector2>();
 
+        Vector2 mousePos = playerInputActions.Player.MousePosition.ReadValue<Vector2>();
+        if (mouseMovingPressed)
+        {
+            Debug.Log("Howdie");
+            Vector3 playerScreenPos = Camera.main.WorldToScreenPoint(transform.position);
+            movmentVector = new Vector2(mousePos.x - playerScreenPos.x, mousePos.y - playerScreenPos.y);
+        }
+
         Vector3 newRigidbodyVelocity = new Vector3(0, rigidbody_.velocity.y, 0);
 
         if(movmentVector.x > 0.1 || movmentVector.x < -0.1 || movmentVector.y > 0.1 || movmentVector.y < -0.1)
@@ -88,6 +98,16 @@ public class PlayerMovement : MonoBehaviour
 
         rigidbody_.velocity = newRigidbodyVelocity;
         //if(IsGrounded()) animator.SetBool("isJumping", false);
+    }
+
+    private void MouseMove_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        Debug.Log("presssssssssed");
+        if (obj.performed)
+            mouseMovingPressed = true;
+        if (obj.canceled)
+            mouseMovingPressed = false;
+
     }
 
     private void Jump_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
