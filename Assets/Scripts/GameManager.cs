@@ -39,5 +39,6 @@ public class GameManager : MonoBehaviour
     {
         playerHasWon = false;
         playerIsDead = false;
+        FindObjectOfType<PointsManager>().startScoreTracker();
     }
 }

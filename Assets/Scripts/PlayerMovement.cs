@@ -102,7 +102,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void MouseMove_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        Debug.Log("presssssssssed");
         if (obj.performed)
             mouseMovingPressed = true;
         if (obj.canceled)
