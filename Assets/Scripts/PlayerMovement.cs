@@ -72,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
         Vector2 mousePos = playerInputActions.Player.MousePosition.ReadValue<Vector2>();
         if (mouseMovingPressed)
         {
-            Debug.Log("Howdie");
             Vector3 playerScreenPos = Camera.main.WorldToScreenPoint(transform.position);
             movmentVector = new Vector2(mousePos.x - playerScreenPos.x, mousePos.y - playerScreenPos.y);
         }

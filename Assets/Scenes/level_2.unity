@@ -6182,7 +6182,7 @@ GameObject:
   - component: {fileID: 1489656096}
   - component: {fileID: 1489656095}
   m_Layer: 5
-  m_Name: WinScreen
+  m_Name: MenuScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
