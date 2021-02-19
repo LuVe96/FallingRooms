@@ -23,8 +23,8 @@ public class NutCrackerHandler : MonoBehaviour
     {
         transform.Rotate(new Vector4(0, 0, 1), mainRotationSpeed * Time.deltaTime);
 
-        wall_1.Rotate(new Vector4(0, 0, 1 ), wallsRoationSpeed * Time.deltaTime);
-        wall_2.Rotate(new Vector4(0, 0, 1), wallsRoationSpeed * Time.deltaTime);
-        wall_3.Rotate(new Vector4(0, 0, 1), wallsRoationSpeed * Time.deltaTime);
+        wall_1.Rotate(new Vector4(0, 1, 0 ), wallsRoationSpeed * Time.deltaTime);
+        wall_2.Rotate(new Vector4(0, 1, 0), wallsRoationSpeed * Time.deltaTime);
+        wall_3.Rotate(new Vector4(0, 1, 0), wallsRoationSpeed * Time.deltaTime);
     }
 }

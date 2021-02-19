@@ -1526,6 +1526,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &414643202 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8757251329429599874, guid: 6bc79d577c315e34bb53531810ecb9f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5435410297495433763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &453414870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,6 +3554,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994962806}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1038942712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7072254234582698230, guid: 6bc79d577c315e34bb53531810ecb9f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5435410297495433763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1047121756
 GameObject:
   m_ObjectHideFlags: 0
@@ -6840,6 +6852,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763685108}
   m_Mesh: {fileID: 3525479140033381557, guid: a6556824fe7bf7645b6e8aaed1a5f8bb, type: 3}
+--- !u!4 &1773335371 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 236229907845526822, guid: 6bc79d577c315e34bb53531810ecb9f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5435410297495433763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1783077578
 GameObject:
   m_ObjectHideFlags: 0
@@ -20788,6 +20806,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: NutCrackerPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 5435410298898486453, guid: 6bc79d577c315e34bb53531810ecb9f3,
+        type: 3}
+      propertyPath: wall_1
+      value: 
+      objectReference: {fileID: 414643202}
+    - target: {fileID: 5435410298898486453, guid: 6bc79d577c315e34bb53531810ecb9f3,
+        type: 3}
+      propertyPath: wall_2
+      value: 
+      objectReference: {fileID: 1773335371}
+    - target: {fileID: 5435410298898486453, guid: 6bc79d577c315e34bb53531810ecb9f3,
+        type: 3}
+      propertyPath: wall_3
+      value: 
+      objectReference: {fileID: 1038942712}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bc79d577c315e34bb53531810ecb9f3, type: 3}
 --- !u!114 &5575802345759025516
