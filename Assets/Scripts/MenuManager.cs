@@ -155,6 +155,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         transform.Find("MenuScreen").gameObject.SetActive(false);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         currentMenuType = MenuType.None;
     }
 
@@ -162,7 +163,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         transform.Find("MenuScreen").gameObject.SetActive(false);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         GameManager.Instance.OnRestart();
         currentMenuType = MenuType.None;
     }
