@@ -62,9 +62,9 @@ public class LevelGenerator : MonoBehaviour
                 }
             }
 
-            switch (item)
+            switch (item.Substring(0, 4))
             {
-                case "break":
+                case "brea":
                     evenLine = !evenLine;
                     if (evenLine)
                     {
@@ -75,9 +75,7 @@ public class LevelGenerator : MonoBehaviour
                     }
                     break;
                 case "EMPT": currPos += new Vector3(delta_x, 0, 0); break;
-                case "shift":
-                    break;
-                case "end":
+                case "shif":
                     break;
                 default:
                     break;

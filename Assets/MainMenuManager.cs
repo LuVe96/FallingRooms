@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public GameObject lvlSelector;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartLevelMenu()
     {
-        GetComponent<LevelSelector>().StartLevel(1);
+        lvlSelector.SetActive(true);
     }
 }

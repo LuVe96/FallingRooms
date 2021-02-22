@@ -3,7 +3,7 @@
     {
       "Name": "Level1",
       "RefTime": "20",
-      "LevelString": "empt,SSP1,empt,_00_,empt,_00_,empt,brea,_00_,empt,SNP1,empt,_00_,empt,_00_,brea,empt,_00_,empt,SNP1,empt,SNP1,empt,brea,_00_,empt,_00_,empt,_00_,empt,SNP1,brea,empt,_00_,empt,_00_,empt,SGP1,empt,end"
+      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
     },
     {
       "Name": "Level2",
