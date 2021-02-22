@@ -24,6 +24,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartLevelMenu()
     {
-        GetComponent<LevelSelector>().StartLevel(0);
+        GetComponent<LevelSelector>().StartLevel(1);
     }
 }

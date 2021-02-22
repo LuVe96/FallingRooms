@@ -8,6 +8,7 @@ public class LevelGenerator : MonoBehaviour
 
     public GeneratedPlatform[] generatedPlatforms;
     public Transform player;
+    public Transform parent;
     private Level currentLevel;
 
     private Vector3 currPos;
@@ -35,13 +36,13 @@ public class LevelGenerator : MonoBehaviour
             {
                 if(item.Substring(0,3) == platform.key.ToString())
                 {
-                    GameObject pf = Instantiate(platform.plattform);
+                    GameObject pf = Instantiate(platform.plattform, parent);
                     platform.plattform.transform.position = currPos;
                     platform.plattform.transform.rotation = Quaternion.Euler(-90,0,0) ;
 
-                    if (item.Substring(0, 3) == PlatformKey.SSP.ToString())
+                    if (item.Substring(0, 3) == PlatformKey.STT.ToString())
                     {
-                        player.transform.position += currPos;
+                        player.transform.position = currPos; // new Vector3(-currPos.z, 1, currPos.x); 
                     }
 
                     switch (item.Substring(3, 1))
@@ -63,7 +64,7 @@ public class LevelGenerator : MonoBehaviour
 
             switch (item)
             {
-                case "brea":
+                case "break":
                     evenLine = !evenLine;
                     if (evenLine)
                     {
@@ -73,8 +74,8 @@ public class LevelGenerator : MonoBehaviour
                         currPos = new Vector3(-delta_x/2, 0, currPos.z - delta_z);
                     }
                     break;
-                case "_00_": currPos += new Vector3(delta_x, 0, 0); break;
-                case "empty":
+                case "EMPT": currPos += new Vector3(delta_x, 0, 0); break;
+                case "shift":
                     break;
                 case "end":
                     break;
@@ -97,5 +98,5 @@ public class GeneratedPlatform
 
     public enum PlatformKey
     {
-        SSP, SNP, SGP, _00, empt, br, end
+        NOR, STT, GOL, KEY, BRD, NUT, ROT, BND, SHT, SPI, LSH, LSP, GUN, SHO
     }
