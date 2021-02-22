@@ -1,9 +1,9 @@
  {
-  "Levels":
-  [{
-    "Name": "Level1",
-    "RefTime": "20",
-	"LevelString" : "----,SSP1,----,_00_,----,_00_,----,br,_00_,----,SNP1,----,_00_,----,_00_,br,----,_00_,----,SNP1,----,SNP1,----,br,_00_,----,_00_,----,_00_,----,SNP1,br,----,_00_,----,_00_,----,SGP1,----,end"
-  }
+  "Levels": [
+    {
+      "Name": "Level1",
+      "RefTime": "20",
+      "LevelString": "empt,SSP1,empt,_00_,empt,_00_,empt,brea,_00_,empt,SNP1,empt,_00_,empt,_00_,brea,empt,_00_,empt,SNP1,empt,SNP1,empt,brea,_00_,empt,_00_,empt,_00_,empt,SNP1,brea,empt,_00_,empt,_00_,empt,SGP1,empt,end"
+    }
   ]
 }
