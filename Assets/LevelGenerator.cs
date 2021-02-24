@@ -38,7 +38,7 @@ public class LevelGenerator : MonoBehaviour
                 {
                     GameObject pf = Instantiate(platform.plattform, parent);
                     platform.plattform.transform.position = currPos;
-                    platform.plattform.transform.rotation = Quaternion.Euler(-90,0,0) ;
+                    platform.plattform.transform.rotation = Quaternion.Euler(0,0,0) ;
 
                     if (item.Substring(0, 3) == PlatformKey.STT.ToString())
                     {
@@ -47,12 +47,12 @@ public class LevelGenerator : MonoBehaviour
 
                     switch (item.Substring(3, 1))
                     {
-                        case "0": platform.plattform.transform.rotation = Quaternion.Euler(-90, 60 * 0f, 0); break;
-                        case "1": platform.plattform.transform.rotation = Quaternion.Euler(-90, 60 * 1f, 0) ; break;
-                        case "2": platform.plattform.transform.rotation = Quaternion.Euler(-90, 60 * 2f, 0); break;
-                        case "3": platform.plattform.transform.rotation = Quaternion.Euler(-90, 60 * 3f, 0); break;
-                        case "4": platform.plattform.transform.rotation = Quaternion.Euler(-90, 60 * 4f, 0); break;
-                        case "5": platform.plattform.transform.rotation = Quaternion.Euler(-90, 60 * 5f, 0); break;
+                        case "0": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 0f, 0); break;
+                        case "1": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 1f, 0) ; break;
+                        case "2": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 2f, 0); break;
+                        case "3": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 3f, 0); break;
+                        case "4": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 4f, 0); break;
+                        case "5": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 5f, 0); break;
                         default:
                             break;
                     }

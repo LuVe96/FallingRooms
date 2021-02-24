@@ -14,6 +14,8 @@ public class PlatformHandler : MonoBehaviour
     private bool warnMaterialIsActive = false;
     public float timeToLive = 7;
 
+    public LightContainer[] lights;
+
     [HideInInspector]
     public bool isFalling = false;
     public float frequenzTime = 0.5f;
@@ -60,17 +62,16 @@ public class PlatformHandler : MonoBehaviour
             if (timeSum >= timeToLive)
             {
                 isFalling = true;
-                gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
-                deltionTimeSum += Time.deltaTime;
-
-                
-                transform.localScale *= 0.997f;
+                deltionTimeSum += Time.deltaTime;           
+                transform.localScale *= 0.990f;
                 
                 if(deltionTimeSum >= deletionTime)
                 {
                     Destroy(gameObject);
                 }
+
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
 
 
@@ -83,12 +84,32 @@ public class PlatformHandler : MonoBehaviour
         if (!warnMaterialIsActive)
         {
             warnMaterialIsActive = true;
-            GetComponentInChildren<MeshRenderer>().material = redMaterial;
+            //GetComponentInChildren<MeshRenderer>().material = redMaterial;
+
+            foreach (var item in lights)
+            {
+                Material[] mats = item.renderer.materials;
+                mats[item.index] = redMaterial;
+                item.renderer.materials = mats;
+            }
         }
         else
         {
             warnMaterialIsActive = false;
-            GetComponentInChildren<MeshRenderer>().material = stdMaterial;
+            //GetComponentInChildren<MeshRenderer>().material = stdMaterial;
+            foreach (var item in lights)
+            {
+                Material[] mats = item.renderer.materials;
+                mats[item.index] = stdMaterial;
+                item.renderer.materials = mats;
+            }
         }
+    }
+
+    [System.Serializable]
+    public class LightContainer
+    {
+        public MeshRenderer renderer;
+        public int index;
     }
 }
