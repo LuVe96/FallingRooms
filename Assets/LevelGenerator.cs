@@ -12,8 +12,8 @@ public class LevelGenerator : MonoBehaviour
     private Level currentLevel;
 
     private Vector3 currPos;
-    private float delta_x = 8.6608f;
-    private float delta_z = 7.4978f;
+    private float delta_z = 4.3326f;
+    private float delta_x = 7.50f;
 
     private bool evenLine = true;
 
@@ -38,51 +38,73 @@ public class LevelGenerator : MonoBehaviour
                 {
                     GameObject pf = Instantiate(platform.plattform, parent);
                     platform.plattform.transform.position = currPos;
-                    platform.plattform.transform.rotation = Quaternion.Euler(0,0,0) ;
+                    platform.plattform.transform.rotation = Quaternion.Euler(0,30,0) ;
 
                     if (item.Substring(0, 3) == PlatformKey.STT.ToString())
                     {
                         player.transform.position = currPos; // new Vector3(-currPos.z, 1, currPos.x); 
                     }
 
-                    switch (item.Substring(3, 1))
+                    if (item.Length >= 4)
                     {
-                        case "0": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 0f, 0); break;
-                        case "1": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 1f, 0) ; break;
-                        case "2": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 2f, 0); break;
-                        case "3": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 3f, 0); break;
-                        case "4": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 4f, 0); break;
-                        case "5": platform.plattform.transform.rotation = Quaternion.Euler(0, 60 * 5f, 0); break;
-                        default:
-                            break;
+                        switch (item.Substring(3, 1))
+                        {
+                            case "0": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 0f, 0); break;
+                            case "1": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 1f, 0); break;
+                            case "2": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 2f, 0); break;
+                            case "3": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 3f, 0); break;
+                            case "4": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 4f, 0); break;
+                            case "5": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 5f, 0); break;
+                            default:
+                                break;
+                        }
                     }
+
 
                     currPos += new Vector3(delta_x, 0, 0);
                     
                 }
             }
 
-            switch (item.Substring(0, 4))
+            if (item.Length >= 4)
             {
-                case "brea":
-                    evenLine = !evenLine;
-                    if (evenLine)
-                    {
+                switch (item.Substring(0, 4))
+                {
+                    case "brea":
+                        //evenLine = !evenLine;
+                        //if (evenLine)
+                        //{
+                        //    currPos = new Vector3(0, 0, currPos.z - delta_z);
+                        //} else
+                        //{
+                        //    currPos = new Vector3(-delta_x/2, 0, currPos.z - delta_z);
+                        //}
                         currPos = new Vector3(0, 0, currPos.z - delta_z);
-                    } else
-                    {
-                        currPos = new Vector3(-delta_x/2, 0, currPos.z - delta_z);
-                    }
-                    break;
-                case "EMPT": currPos += new Vector3(delta_x, 0, 0); break;
-                case "shif":
-                    break;
-                default:
-                    break;
+                        break;
+                    case "EMPT": currPos += new Vector3(delta_x, 0, 0); break;
+                    case "shif":
+                        currPos += new Vector3(delta_x, 0, 0); break;
+                    default:
+                        break;
+                }
             }
+                
 
         }
 
+    }
+
+    private void shiftLine()
+    {
+        evenLine = !evenLine;
+        if (evenLine)
+        {
+            currPos += new Vector3(0, 0, delta_z);
+        }
+        else
+        {
+            currPos += new Vector3(0, 0, -delta_z);
+        }
     }
 
 }
