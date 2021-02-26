@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static PlatformHandler;
 
 public class CentryGun : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class CentryGun : MonoBehaviour
     public PlayerEnterTrigger playerEnterTrigger;
     private bool triggered;
 
+    public LightContainer lightLED;
+    public Material stdLight;
+    public Material warLight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,10 @@ public class CentryGun : MonoBehaviour
     void Update()
     {
         if (!playerEnterTrigger.triggeredForSentryGun) { return; }
+
+        Material[] mats = lightLED.renderer.materials;
+        mats[lightLED.index] = warLight;
+        lightLED.renderer.materials = mats;
 
         timeSum += Time.deltaTime;
         if(timeSum >= frequenzTime)
@@ -39,7 +48,7 @@ public class CentryGun : MonoBehaviour
     void Shoot()
     {
         var b = Instantiate(bullet);
-        b.transform.position = gun.position + new Vector3(0,0,0.5f);
+        b.transform.position = gun.position;
         var forward = player.transform.Find("Astronaut").forward;
         Vector3 direction =  new Vector3(player.transform.position.x, transform.parent.position.y + 1, player.transform.position.z) + forward  - b.transform.position ;
         b.GetComponent<SentryGunBullet>().Shoot(direction);
