@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static PlatformHandler;
 
 public class EndDoorHandler : MonoBehaviour
 {
 
     private Color stdColor;
     public Color openingFailedColor;
-    private MeshRenderer meshRenderer;
+    public LightContainer lightMeshRenderer;
 
-    private void Start()
-    {
-        meshRenderer = GetComponent<MeshRenderer>();
-        stdColor = meshRenderer.material.color;
-    }
+    public Material light_geen;
+    public Material light_red;
+    public Material light_std;
+
 
     // Update is called once per frame
     void Update()
@@ -56,19 +56,29 @@ public class EndDoorHandler : MonoBehaviour
             timeSum += Time.deltaTime;
 
             blinkTimeSum += Time.deltaTime;
-            if (!opening) meshRenderer.material.color = openingFailedColor;
+            if (!opening) {
+                Material[] mats = lightMeshRenderer.renderer.materials;
+                mats[lightMeshRenderer.index] = light_red;
+                lightMeshRenderer.renderer.materials = mats;
+            }
             else  if (blinkTimeSum >= 0.1f)
             {
                 blinkTimeSum = 0;
-                meshRenderer.material.color = stdColor;
-                if (meshRenderer.enabled == true)
+                Material[] mats = lightMeshRenderer.renderer.materials;
+                mats[lightMeshRenderer.index] = light_std;
+                lightMeshRenderer.renderer.materials = mats;
+                if (lightMeshRenderer.renderer.materials[lightMeshRenderer.index].name == light_std.name)
                 {
                     //meshRenderer.material.color = openDoorColor;
-                    meshRenderer.enabled = false;
+                    Material[] mats1 = lightMeshRenderer.renderer.materials;
+                    mats[lightMeshRenderer.index] = light_geen;
+                    lightMeshRenderer.renderer.materials = mats1;
                 }
                 else
                 {
-                    meshRenderer.enabled = true;
+                    Material[] mats1 = lightMeshRenderer.renderer.materials;
+                    mats[lightMeshRenderer.index] = light_std;
+                    lightMeshRenderer.renderer.materials = mats1;
                 }
 
             }

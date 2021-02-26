@@ -18,7 +18,7 @@ public class LevelGenerator : MonoBehaviour
     private bool evenLine = true;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         currPos = new Vector3(0, 0, 0);
          currentLevel = DataSaver.loadData<Level>("currentLevel");
@@ -37,8 +37,8 @@ public class LevelGenerator : MonoBehaviour
                 if(item.Substring(0,3) == platform.key.ToString())
                 {
                     GameObject pf = Instantiate(platform.plattform, parent);
-                    platform.plattform.transform.position = currPos;
-                    platform.plattform.transform.rotation = Quaternion.Euler(0,30,0) ;
+                    pf.transform.position = currPos;
+                    pf.transform.rotation = Quaternion.Euler(0,30,0) ;
 
                     if (item.Substring(0, 3) == PlatformKey.STT.ToString())
                     {
@@ -49,12 +49,12 @@ public class LevelGenerator : MonoBehaviour
                     {
                         switch (item.Substring(3, 1))
                         {
-                            case "0": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 0f, 0); break;
-                            case "1": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 1f, 0); break;
-                            case "2": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 2f, 0); break;
-                            case "3": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 3f, 0); break;
-                            case "4": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 4f, 0); break;
-                            case "5": platform.plattform.transform.rotation = Quaternion.Euler(0, platform.plattform.transform.rotation.eulerAngles.y + 60 * 5f, 0); break;
+                            case "1": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 1f, 0); break;
+                            case "2": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 2f, 0); break;
+                            case "3": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 3f, 0); break;
+                            case "4": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 4f, 0); break;
+                            case "5": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 5f, 0); break;
+                            case "0": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 0f, 0); break;
                             default:
                                 break;
                         }

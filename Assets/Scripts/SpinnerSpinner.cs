@@ -7,6 +7,7 @@ public class SpinnerSpinner : MonoBehaviour
     public float rotationSpeed = 1;
     private int random;
 
+
     private void Start()
     {
         random = Random.Range(0, 2);
