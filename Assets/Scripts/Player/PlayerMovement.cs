@@ -59,8 +59,8 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (transform.Find("CameraHolder").Find("Main Camera").GetComponent<OverviewHandler>().inOverview ||
-            transform.GetComponentInChildren<RagdollHandler>().isRagdollActive)
+        if (transform.Find("CameraHolder").Find("Main Camera").GetComponent<OverviewHandler>().inOverview 
+            /*transform.GetComponentInChildren<RagdollHandler>().isRagdollActive*/)
         {
             animator.SetBool("isWalking", false);
             return;
