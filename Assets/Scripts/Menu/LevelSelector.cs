@@ -15,57 +15,64 @@ public class LevelSelector : MonoBehaviour
     public Transform levelsHolder;
     public Button backButton;
     public Button startButton;
+    public Button pageBackButton;
+    public Button pageNextButton;
     public GameObject levelUiPrefab;
+    public int itemsPerPage = 8;
 
     private Level currentSelecteLevel;
+    private int currentSelectedLevelIndex = 0;
     private LevelsFile lvlsF;
     private LevelScoreFile lvlScoreFile;
     private List<UiLevelPanelHandler> uiLevelHandlers;
+    private int currentPage = 0;
+    private int maxPages;
 
-    private 
     // Start is called before the first frame update
     void Start()
     {
         lvlsF = ReadLevelFile();
         //lvlScoreFile = DataSaver.loadData<LevelScoreFile>("levelScores");
         uiLevelHandlers = new List<UiLevelPanelHandler>();
+        maxPages = (int)lvlsF.Levels.Length/8 +1;
+        currentSelecteLevel = lvlsF.Levels[0];
 
         UiLevelPanelHandler.buttonClickDelegate += AnyLevelSelcted;
         startButton.onClick.AddListener(startButtonClicked);
         backButton.onClick.AddListener(backButtonClicked);
+        pageNextButton.onClick.AddListener(pageNextButtonClicked);
+        pageBackButton.onClick.AddListener(pageBackButtonClicked);
 
-
-        for (int i = 0; i < lvlsF.Levels.Length; i++)
-        {
-            Level lvl = lvlsF.Levels[i];
-            var l = Instantiate(levelUiPrefab, levelsHolder);
-            l.transform.SetAsLastSibling();
-            var lH = l.GetComponent<UiLevelPanelHandler>();
-            lH.Setup(i,lvl, 1, (i == 0));
-            uiLevelHandlers.Add(lH);
-        }
+        updateNavigationButtons();
+        createLevelUi(currentPage * itemsPerPage, currentPage * itemsPerPage + itemsPerPage);
     }
 
     private void AnyLevelSelcted(int index)
     {
         for (int i = 0; i < lvlsF.Levels.Length; i++)
         {
-
-            uiLevelHandlers[i].setSelected(false);
-
+            if(i < uiLevelHandlers.Count) uiLevelHandlers[i].setSelected(false);
             if( i == index)
             {
-                uiLevelHandlers[i].setSelected(true);
+                uiLevelHandlers[i -(currentPage * itemsPerPage)].setSelected(true);
+                currentSelectedLevelIndex = i;
                 currentSelecteLevel = lvlsF.Levels[i];
             }
-
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void pageBackButtonClicked()
     {
-        
+        currentPage -= 1;
+        createLevelUi(currentPage * itemsPerPage, currentPage * itemsPerPage + itemsPerPage);
+        updateNavigationButtons();
+    }
+
+    private void pageNextButtonClicked()
+    {
+        currentPage += 1;
+        createLevelUi(currentPage * itemsPerPage, currentPage * itemsPerPage + itemsPerPage);
+        updateNavigationButtons();
     }
 
     private void backButtonClicked()
@@ -77,6 +84,35 @@ public class LevelSelector : MonoBehaviour
     {
         DataSaver.saveData(currentSelecteLevel, "currentLevel");
         SceneManager.LoadScene(1);
+    }
+
+    private void updateNavigationButtons()
+    {
+        pageBackButton.gameObject.SetActive(currentPage > 0);
+        pageNextButton.gameObject.SetActive(currentPage < maxPages-1);
+    }
+
+    private void createLevelUi(int statIndex, int endIndex)
+    {
+        for (int i = 0; i < levelsHolder.transform.childCount; i++)
+        {
+            var go = levelsHolder.transform.GetChild(i).gameObject;
+            if (go.name != "LNB") Destroy(go);
+        }
+        uiLevelHandlers.Clear();
+
+        for (int i = statIndex; i < endIndex; i++)
+        {
+            if( i < lvlsF.Levels.Length)
+            {
+                Level lvl = lvlsF.Levels[i];
+                var l = Instantiate(levelUiPrefab, levelsHolder);
+                l.transform.SetAsLastSibling();
+                var lH = l.GetComponent<UiLevelPanelHandler>();
+                lH.Setup(i, lvl, 1, (i == currentSelectedLevelIndex));
+                uiLevelHandlers.Add(lH);
+            }
+        }
     }
 
     private LevelsFile ReadLevelFile()
