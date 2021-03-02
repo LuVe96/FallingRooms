@@ -132,7 +132,7 @@ public class LevelSelector : MonoBehaviour
         }
     }
 
-    private LevelsFile ReadLevelFile()
+    public LevelsFile ReadLevelFile()
     {
         //Load saved Json
         byte[] jsonByte = null;
@@ -151,6 +151,8 @@ public class LevelSelector : MonoBehaviour
         //Convert to Object
         object resultValue = JsonUtility.FromJson<LevelsFile>(jsonData);
         LevelsFile lvls = (LevelsFile)Convert.ChangeType(resultValue, typeof(LevelsFile));
+
+        DataSaver.saveData(lvls, "allLevels");
         return lvls;
     }
 }

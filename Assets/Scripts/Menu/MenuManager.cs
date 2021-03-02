@@ -166,35 +166,45 @@ public class MenuManager : MonoBehaviour
         nextButton.GetComponentInChildren<Text>().text = "Resume";
     }
 
-    //public void Restart()
-    //{
-    //    UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-    //    GameManager.Instance.OnRestart();
-    //}
-
 
     private void NextClicked()
     {
-        Time.timeScale = 1;
-        transform.Find("MenuScreen").gameObject.SetActive(false);
         currentMenuType = MenuType.None;
+        Time.timeScale = 1;
+        var lvlFile = DataSaver.loadData<LevelsFile>("allLevels");
+        int newIndex = FindObjectOfType<LevelGenerator>().currentLevel.Index + 1;
+        if (lvlFile.Levels.Length > newIndex)
+        {
+            transform.Find("MenuScreen").gameObject.SetActive(false);
+            var newCurLvl = new CurrentLevel(newIndex, lvlFile.Levels[newIndex]);
+            DataSaver.saveData(newCurLvl, "currentLevel");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            GameManager.Instance.OnRestart();
+        }
+        else
+        {
+            nextButton.gameObject.SetActive(false);
+        }
+
     }
 
     private void MenuClicked()
     {
+        currentMenuType = MenuType.None;
         Time.timeScale = 1;
         transform.Find("MenuScreen").gameObject.SetActive(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-        currentMenuType = MenuType.None;
+
     }
 
     private void RetryClicked()
     {
+        currentMenuType = MenuType.None;
         Time.timeScale = 1;
         transform.Find("MenuScreen").gameObject.SetActive(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         GameManager.Instance.OnRestart();
-        currentMenuType = MenuType.None;
+
     }
 }
 

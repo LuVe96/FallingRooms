@@ -40,5 +40,6 @@ public class GameManager : MonoBehaviour
         playerHasWon = false;
         playerIsDead = false;
         FindObjectOfType<PointsManager>().startScoreTracker();
+        Time.timeScale = 1;
     }
 }
