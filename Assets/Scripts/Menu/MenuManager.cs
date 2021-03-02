@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour
     private PlayerInputActions playerInputActions;
 
     private MenuType currentMenuType;
+    private LevelScoreFile lvlScoreFile;
 
     // Start is called before the first frame update
     void Awake()
@@ -34,7 +35,7 @@ public class MenuManager : MonoBehaviour
         retryButton.onClick.AddListener(RetryClicked);
         menuButton.onClick.AddListener(MenuClicked);
         nextButton.onClick.AddListener(NextClicked);
-
+        lvlScoreFile = DataSaver.loadData<LevelScoreFile>("levelScores");
     }
 
     private void OnEnable()
@@ -81,7 +82,8 @@ public class MenuManager : MonoBehaviour
         timeText.text = "Time: " + score.scoreTime; 
         shocksText.text = "Shockes: " + score.scoreShocks;
         pointsText.text = "Points: " + score.points;
-    
+
+        updateScoreToFile(lvlScoreFile, score.stars);
         for (int i = 0; i < starImages.Length; i++)
         {
             starImages[i].enabled =true;
@@ -100,6 +102,33 @@ public class MenuManager : MonoBehaviour
         menuButton.gameObject.SetActive(true);
         nextButton.gameObject.SetActive(true);
         nextButton.GetComponentInChildren<Text>().text = "Next Level";
+    }
+
+    private void updateScoreToFile(LevelScoreFile lvlFile, int stars)
+    {
+        if(lvlFile == null)
+        {
+            List<LevelScore> scores = new List<LevelScore>();
+            scores.Add(new LevelScore(stars));
+            LevelScoreFile lSdata = new LevelScoreFile( scores);
+            DataSaver.saveData(lSdata, "levelScores");
+        } else
+        {
+            List<LevelScore> scores = lvlFile.levelScores;
+            int i = FindObjectOfType<LevelGenerator>().currentLevel.Index;
+            if ( i < scores.Count)
+            {
+                if( scores[i].stars < stars)
+                {
+                    scores[i].stars = stars;
+                }
+            }else
+            {
+                scores.Add(new LevelScore(stars));
+            }
+            LevelScoreFile lSdata = new LevelScoreFile(scores);
+            DataSaver.saveData(lSdata, "levelScores");
+        }
     }
 
     private void setupLooseScreen()
@@ -155,7 +184,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         transform.Find("MenuScreen").gameObject.SetActive(false);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         currentMenuType = MenuType.None;
     }
 

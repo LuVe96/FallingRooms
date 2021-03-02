@@ -14,12 +14,14 @@ public class UiLevelPanelHandler : MonoBehaviour
     public Sprite stdStar;
     public Sprite filledStar;
     public Color selectedColor;
+    public Color disabledColor;
 
     public delegate void SelectButtonClicked(int index);
     public static SelectButtonClicked buttonClickDelegate;
 
     private int index;
     private bool selected;
+    private bool opened;
     private Image btnImage;
     private Color stdColor;
 
@@ -27,7 +29,6 @@ public class UiLevelPanelHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        btn.onClick.AddListener(btnClicked);
         btnImage = btn.GetComponent<Image>();
         stdColor = btnImage.color;
 
@@ -47,15 +48,24 @@ public class UiLevelPanelHandler : MonoBehaviour
         }
         else
         {
-            btnImage.color = stdColor;
+            btnImage.color = opened ? stdColor : disabledColor;
         }
     }
 
-    public void Setup(int index, Level lvl, int starsCount, bool selected)
+    public void Setup(int index, Level lvl, int starsCount, bool selected, bool opened)
     {
         this.index = index;
         this.selected = selected;
+        this.opened = opened;
         nameText.text = lvl.Name;
+
+        if(opened)
+        {
+            btn.onClick.AddListener(btnClicked);
+        } else
+        {
+            btn.onClick.RemoveAllListeners();
+        }
 
         for (int i = 0; i < stars.Length; i++)
         {

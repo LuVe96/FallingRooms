@@ -265,6 +265,7 @@ MonoBehaviour:
   stdStar: {fileID: 21300000, guid: ed4b46b0efb0a6042bea694c93bb6108, type: 3}
   filledStar: {fileID: 21300000, guid: 42729632630d47b44a7eaaac605c3267, type: 3}
   selectedColor: {r: 0.26162854, g: 0.8962264, b: 0.19023676, a: 0.6392157}
+  disabledColor: {r: 0, g: 0, b: 0, a: 0.49411765}
 --- !u!1 &5620070726877758074
 GameObject:
   m_ObjectHideFlags: 0

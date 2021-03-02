@@ -22,6 +22,7 @@ public class LevelSelector : MonoBehaviour
 
     private Level currentSelecteLevel;
     private int currentSelectedLevelIndex = 0;
+    private int nextOpenedLevelIndex = 0;
     private LevelsFile lvlsF;
     private LevelScoreFile lvlScoreFile;
     private List<UiLevelPanelHandler> uiLevelHandlers;
@@ -32,7 +33,7 @@ public class LevelSelector : MonoBehaviour
     void Start()
     {
         lvlsF = ReadLevelFile();
-        //lvlScoreFile = DataSaver.loadData<LevelScoreFile>("levelScores");
+        lvlScoreFile = DataSaver.loadData<LevelScoreFile>("levelScores");
         uiLevelHandlers = new List<UiLevelPanelHandler>();
         maxPages = (int)lvlsF.Levels.Length/8 +1;
         currentSelecteLevel = lvlsF.Levels[0];
@@ -56,7 +57,7 @@ public class LevelSelector : MonoBehaviour
             {
                 uiLevelHandlers[i -(currentPage * itemsPerPage)].setSelected(true);
                 currentSelectedLevelIndex = i;
-                currentSelecteLevel = lvlsF.Levels[i];
+                currentSelecteLevel = new CurrentLevel(i, lvlsF.Levels[i]);
             }
         }
     }
@@ -106,11 +107,27 @@ public class LevelSelector : MonoBehaviour
             if( i < lvlsF.Levels.Length)
             {
                 Level lvl = lvlsF.Levels[i];
+                int stars = 0;
+                if(lvlScoreFile != null)
+                {
+                    if (i < lvlScoreFile.levelScores.Count)
+                    {
+                        stars = lvlScoreFile.levelScores[i].stars;
+                    }
+                }
                 var l = Instantiate(levelUiPrefab, levelsHolder);
                 l.transform.SetAsLastSibling();
                 var lH = l.GetComponent<UiLevelPanelHandler>();
-                lH.Setup(i, lvl, 1, (i == currentSelectedLevelIndex));
+                lH.Setup(i, lvl, stars, (i == currentSelectedLevelIndex), (i == nextOpenedLevelIndex));
                 uiLevelHandlers.Add(lH);
+
+                if (lvlScoreFile != null && i < lvlScoreFile.levelScores.Count)
+                {
+                    if (i < lvlScoreFile.levelScores.Count)
+                    {
+                        nextOpenedLevelIndex = i + 1;
+                    }
+                }
             }
         }
     }
@@ -154,15 +171,43 @@ public class Level
 }
 
 [Serializable]
+public class CurrentLevel : Level
+{
+    public int Index;
+
+    public CurrentLevel(int index, Level lvl)
+    {
+        Index = index;
+        Name = lvl.Name;
+        RefTime = lvl.RefTime;
+        LevelString = lvl.LevelString;
+    }
+}
+
+[Serializable]
 public class LevelScoreFile
 {
-    public LevelScore[] levelScores;
+    public List<LevelScore> levelScores;
+
+
+    public LevelScoreFile(List<LevelScore> levelScores)
+    {
+        this.levelScores = levelScores;
+    }
+
+
 }
 
 [Serializable]
 public class LevelScore
 {
-    public string Name;
+    //public string Name;
     public int stars;
+
+    public LevelScore(/*string name,*/ int stars)
+    {
+        //Name = name;
+        this.stars = stars;
+    }
 }
 

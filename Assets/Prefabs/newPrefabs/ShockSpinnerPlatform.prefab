@@ -441,7 +441,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3525479140033381557, guid: e92882588e4343546b62b76118b78af7, type: 3}
 --- !u!1 &7825977213063887251
@@ -10103,6 +10103,7 @@ GameObject:
   - component: {fileID: 3661803119847391405}
   - component: {fileID: 7635632718488041478}
   - component: {fileID: 9075203033271038336}
+  - component: {fileID: 381743708}
   m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
@@ -10185,6 +10186,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7387706064836869012, guid: e92882588e4343546b62b76118b78af7, type: 3}
+--- !u!54 &381743708
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075203033271038351}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &5835837152259780006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10335,6 +10352,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee3250eb931df1a48ae9b11402da7be2, type: 3}
+--- !u!23 &8130718059024601883 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 22163585907354842, guid: ee3250eb931df1a48ae9b11402da7be2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113412123573829569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &4946639392648606133 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3764269348348300916, guid: ee3250eb931df1a48ae9b11402da7be2,
@@ -10344,12 +10367,6 @@ MeshRenderer:
 --- !u!4 &2924843820467450959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6345431840702221198, guid: ee3250eb931df1a48ae9b11402da7be2,
-    type: 3}
-  m_PrefabInstance: {fileID: 8113412123573829569}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &8130718059024601883 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 22163585907354842, guid: ee3250eb931df1a48ae9b11402da7be2,
     type: 3}
   m_PrefabInstance: {fileID: 8113412123573829569}
   m_PrefabAsset: {fileID: 0}

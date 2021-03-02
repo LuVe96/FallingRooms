@@ -9,7 +9,8 @@ public class LevelGenerator : MonoBehaviour
     public GeneratedPlatform[] generatedPlatforms;
     public Transform player;
     public Transform parent;
-    private Level currentLevel;
+    [HideInInspector]
+    public CurrentLevel currentLevel;
 
     private Vector3 currPos;
     private float delta_z = 4.3326f;
@@ -21,7 +22,7 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         currPos = new Vector3(0, 0, 0);
-         currentLevel = DataSaver.loadData<Level>("currentLevel");
+        currentLevel = DataSaver.loadData<CurrentLevel>("currentLevel");
         createLevel();
     }
 
