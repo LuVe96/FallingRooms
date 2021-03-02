@@ -23,6 +23,9 @@ public class LevelGenerator : MonoBehaviour
     {
         currPos = new Vector3(0, 0, 0);
         currentLevel = DataSaver.loadData<CurrentLevel>("currentLevel");
+
+        FindObjectOfType<PointsManager>().refTime = currentLevel.RefTime;
+        FindObjectOfType<PlayerHandler>().setRequredKeys(currentLevel.ReqKeys);
         createLevel();
     }
 
@@ -89,8 +92,6 @@ public class LevelGenerator : MonoBehaviour
                         break;
                 }
             }
-                
-
         }
 
     }

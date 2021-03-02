@@ -32,6 +32,9 @@ public class LevelSelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ///
+        //ResetSaves();
+        ///
         lvlsF = ReadLevelFile();
         lvlScoreFile = DataSaver.loadData<LevelScoreFile>("levelScores");
         uiLevelHandlers = new List<UiLevelPanelHandler>();
@@ -46,6 +49,13 @@ public class LevelSelector : MonoBehaviour
 
         updateNavigationButtons();
         createLevelUi(currentPage * itemsPerPage, currentPage * itemsPerPage + itemsPerPage);
+    }
+
+    public void ResetSaves()
+    {
+        List<LevelScore> scores = new List<LevelScore>();
+        LevelScoreFile lSdata = new LevelScoreFile(scores);
+        DataSaver.saveData(lSdata, "levelScores");
     }
 
     private void AnyLevelSelcted(int index)
@@ -169,6 +179,7 @@ public class Level
 {
     public string Name;
     public int RefTime;
+    public int ReqKeys;
     public string LevelString;
 }
 
@@ -182,6 +193,7 @@ public class CurrentLevel : Level
         Index = index;
         Name = lvl.Name;
         RefTime = lvl.RefTime;
+        ReqKeys = lvl.ReqKeys;
         LevelString = lvl.LevelString;
     }
 }
@@ -190,14 +202,10 @@ public class CurrentLevel : Level
 public class LevelScoreFile
 {
     public List<LevelScore> levelScores;
-
-
     public LevelScoreFile(List<LevelScore> levelScores)
     {
         this.levelScores = levelScores;
     }
-
-
 }
 
 [Serializable]

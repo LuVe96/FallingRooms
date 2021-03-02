@@ -2,53 +2,15 @@
   "Levels": [
     {
       "Name": "Level1",
-      "RefTime": "20",
+      "RefTime": 20,
+      "ReqKeys": 0,
       "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
     },
     {
       "Name": "Level2",
-      "RefTime": "90",
+      "RefTime": 90,
+      "ReqKeys": 3,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,NOR,shift,LSP ,shift,BRD2,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,ROT,shift,SHO ,shift,NOR,shift,KEY,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,SPI,shift,EMPT,shift,BRD1,shift,ROT,shift,NOR,shift,EMPT ,break,shift,SHT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,SHT ,shift,KEY,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,SHO ,shift,EMPT,break,shift,NOR,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,KEY,shift,EMPT,shift,STT,shift,EMPT ,shift,ROT,shift,EMPT ,break,shift,EMPT ,shift,LSH ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,GUN ,shift,break,EMPT,shift,BRD1,shift,GUN ,shift,NOR,shift,EMPT,shift,SPI,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,NOR,shift,EMPT,shift,NOR,shift,EMPT,shift,break,EMPT ,shift,NOR,shift,NUT ,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,ROT,shift,EMPT ,shift,BRD2,shift,GOL,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,BRD1,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,BRD0,shift,EMPT,shift,EMPT,shift,EMPT ,shift,break"
-    },
-    {
-      "Name": "Level3",
-      "RefTime": "20",
-      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
-    },
-    {
-      "Name": "Level4",
-      "RefTime": "20",
-      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
-    },
-    {
-      "Name": "Level5",
-      "RefTime": "20",
-      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
-    },
-    {
-      "Name": "Level6",
-      "RefTime": "20",
-      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
-    },
-    {
-      "Name": "Level7",
-      "RefTime": "20",
-      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
-    },
-    {
-      "Name": "Level8",
-      "RefTime": "20",
-      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
-    },
-    {
-      "Name": "Level9",
-      "RefTime": "20",
-      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
-    },
-    {
-      "Name": "Level10",
-      "RefTime": "20",
-      "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
     }
   ]
     }

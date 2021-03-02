@@ -89,8 +89,6 @@ public class PlayerHandler : MonoBehaviour
                 invincibilityTimeSum = 0;
             }
         }
-
-
     }
 
     private void DoInvincibilityMode(bool activated)
@@ -104,8 +102,6 @@ public class PlayerHandler : MonoBehaviour
             skinnedMeshRenderer.enabled = true;
             blinkTimeSum = 0;
         }
-
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -143,4 +139,10 @@ public class PlayerHandler : MonoBehaviour
         DoInvincibilityMode(true);
     }
 
+    public void setRequredKeys(int keyCount)
+    {
+        requiredeKeysCount = keyCount;
+        GameObject.Find("KeyPanel").GetComponent<KeyPanel>().SetKeys(keyCount);
+
+    }
 }
