@@ -114,9 +114,9 @@ public class PlayerHandler : MonoBehaviour
         }
 
         if(other.tag == "Shocker" && !isShocked)
-        {
-            
+        {   
             StartCoroutine(doShock());
+            FindObjectOfType<PointsManager>().addShock();
         }
 
         if (other.tag == "RagdollActivator")
