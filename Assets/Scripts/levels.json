@@ -1,16 +1,53 @@
- {
+{
   "Levels": [
     {
-      "Name": "Level1",
+      "Name": "LevelXX",
       "RefTime": 20,
       "ReqKeys": 0,
       "LevelString": "shift,EMPT,shift,STT0,shift,NOR0,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR0,shift,NOR0,shift,NOR0,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR,shift,NOR0,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,NOR0,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,GOL0,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level2",
+      "Name": "LevelYY",
       "RefTime": 90,
       "ReqKeys": 3,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,NOR,shift,LSP ,shift,BRD2,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,ROT,shift,SHO ,shift,NOR,shift,KEY,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,SPI,shift,EMPT,shift,BRD1,shift,ROT,shift,NOR,shift,EMPT ,break,shift,SHT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,SHT ,shift,KEY,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,SHO ,shift,EMPT,break,shift,NOR,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,KEY,shift,EMPT,shift,STT,shift,EMPT ,shift,ROT,shift,EMPT ,break,shift,EMPT ,shift,LSH ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,GUN ,shift,break,EMPT,shift,BRD1,shift,GUN ,shift,NOR,shift,EMPT,shift,SPI,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,NOR,shift,EMPT,shift,NOR,shift,EMPT,shift,break,EMPT ,shift,NOR,shift,NUT ,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,ROT,shift,EMPT ,shift,BRD2,shift,GOL,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,BRD1,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,BRD0,shift,EMPT,shift,EMPT,shift,EMPT ,shift,break"
+    },
+    {
+      "Name": "Level1",
+      "RefTime": 20,
+      "ReqKeys": 1,
+      "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,STT,shift,SPI ,shift,NOR,shift,EMPT ,shift,EMPT ,shift,break,EMPT ,shift,EMPT,shift,NOR,shift,NOR,shift,EMPT ,shift,EMPT ,shift,EMPT ,break,shift,EMPT ,shift,NOR,shift,SPI ,shift,KEY,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,NOR,shift,NOR,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,GOL,shift,SPI ,shift,NOR,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT,shift,NOR,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
+    },
+    {
+      "Name": "Level2",
+      "RefTime": 30,
+      "ReqKeys": 2,
+      "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,SPI ,shift,EMPT,shift,BRD 0,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,SPI ,shift,NOR,shift,BRD 2,shift,NOR,shift,BRD 1,shift,break,EMPT,shift,SPI ,shift,EMPT,shift,BRD 2,shift,EMPT,shift,BRD 2,shift,EMPT,break,shift,STT,shift,EMPT,shift,KEY,shift,EMPT,shift,KEY,shift,GOL,shift,break,EMPT ,shift,BRD0,shift,EMPT,shift,SPI ,shift,EMPT ,shift,BRD 0,shift,EMPT ,break,shift,EMPT ,shift,BRD0 ,shift,NOR,shift,SPI ,shift,NOR,shift,BRD 1,shift,break,EMPT,shift,EMPT,shift,BRD 2,shift,EMPT,shift,SPI ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
+    },
+    {
+      "Name": "Level3",
+      "RefTime": 90,
+      "ReqKeys": 4,
+      "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,GOL,shift,EMPT,shift,EMPT,shift,EMPT,break,shift,EMPT,shift,SPI ,shift,EMPT ,shift,BRD0,shift,SPI ,shift,EMPT,shift,break,EMPT ,shift,KEY,shift,SPI ,shift,EMPT ,shift,SPI ,shift,KEY,shift,EMPT ,break,shift,EMPT ,shift,NOR,shift,SPI ,shift,EMPT ,shift,NOR,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,SHT ,shift,NOR,shift,SHT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,BRD1,shift,BRD1,shift,BRD1,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,SHT ,shift,NOR,shift,SHT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,NOR,shift,EMPT ,shift,SPI ,shift,NOR,shift,EMPT,shift,break,EMPT ,shift,KEY,shift,SPI ,shift,EMPT ,shift,SPI ,shift,KEY,shift,EMPT ,break,shift,EMPT,shift,SPI ,shift,BRD0,shift,EMPT ,shift,SPI ,shift,EMPT,shift,break,EMPT ,shift,EMPT,shift,EMPT,shift,STT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
+    },
+    {
+      "Name": "Level4",
+      "RefTime": 60,
+      "ReqKeys": 3,
+      "LevelString": "shift,EMPT,shift,NUT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,BRD2,shift,BRD0,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,STT,shift,EMPT,shift,NOR,shift,SPI ,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,KEY,shift,BRD2,shift,NUT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,NOR,shift,EMPT ,shift,SHT ,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,BRD0,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,KEY,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,BRD2,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,NOR,shift,EMPT ,shift,SHT ,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,KEY,shift,BRD0,shift,NUT ,shift,EMPT ,shift,EMPT,break,shift,GOL,shift,EMPT,shift,NOR,shift,SPI ,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,BRD0,shift,BRD2,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,NUT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
+    },
+    {
+      "Name": "Level5",
+      "RefTime": 22,
+      "ReqKeys": 2,
+      "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,ROT,shift,EMPT,shift,ROT,shift,EMPT,shift,GOL,break,shift,EMPT ,shift,ROT,shift,ROT,shift,ROT,shift,ROT,shift,ROT,shift,break,EMPT ,shift,ROT,shift,KEY,shift,ROT,shift,KEY,shift,ROT,shift,EMPT ,break,shift,ROT,shift,ROT,shift,ROT,shift,ROT,shift,ROT,shift,EMPT ,shift,break,STT,shift,EMPT,shift,ROT,shift,EMPT,shift,ROT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
+    },
+    {
+      "Name": "Level6",
+      "RefTime": 75,
+      "ReqKeys": 5,
+      "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,GOL,shift,SPI ,shift,SPI ,shift,SPI ,shift,SPI ,shift,EMPT,shift,EMPT ,break,shift,LSP ,shift,LSP ,shift,LSP ,shift,LSP ,shift,BRD0,shift,EMPT ,shift,break,EMPT,shift,BRD0,shift,EMPT,shift,BRD0,shift,EMPT,shift,BRD1,shift,EMPT,break,shift,EMPT,shift,KEY,shift,EMPT ,shift,KEY,shift,EMPT,shift,BRD0,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,KEY,break,shift,KEY,shift,EMPT ,shift,KEY,shift,EMPT ,shift,EMPT,shift,BRD2,shift,break,EMPT,shift,BRD0,shift,EMPT,shift,BRD0,shift,EMPT,shift,BRD1,shift,EMPT,break,shift,LSP ,shift,LSP ,shift,LSP ,shift,LSP ,shift,BRD2,shift,EMPT,shift,break,STT,shift,SPI ,shift,SPI ,shift,SPI ,shift,SPI ,shift,EMPT,shift,EMPT ,break,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break"
     }
+
   ]
-    }
+}

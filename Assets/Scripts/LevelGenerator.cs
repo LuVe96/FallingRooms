@@ -13,8 +13,8 @@ public class LevelGenerator : MonoBehaviour
     public CurrentLevel currentLevel;
 
     private Vector3 currPos;
-    private float delta_z = 4.3326f;
-    private float delta_x = 7.50f;
+    private float delta_z = 4.3326f; // 4.3326f;
+    private float delta_x = 7.50f; // 7.50f;
 
     private bool evenLine = true;
 

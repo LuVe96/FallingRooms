@@ -169,22 +169,29 @@ public class MenuManager : MonoBehaviour
 
     private void NextClicked()
     {
+        if(currentMenuType == MenuType.Win)
+        {
+            var lvlFile = DataSaver.loadData<LevelsFile>("allLevels");
+            int newIndex = FindObjectOfType<LevelGenerator>().currentLevel.Index + 1;
+            if (lvlFile.Levels.Length > newIndex)
+            {
+                transform.Find("MenuScreen").gameObject.SetActive(false);
+                var newCurLvl = new CurrentLevel(newIndex, lvlFile.Levels[newIndex]);
+                DataSaver.saveData(newCurLvl, "currentLevel");
+                UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+                GameManager.Instance.OnRestart();
+            }
+            else
+            {
+                nextButton.gameObject.SetActive(false);
+            }
+        }else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        }
+
         currentMenuType = MenuType.None;
         Time.timeScale = 1;
-        var lvlFile = DataSaver.loadData<LevelsFile>("allLevels");
-        int newIndex = FindObjectOfType<LevelGenerator>().currentLevel.Index + 1;
-        if (lvlFile.Levels.Length > newIndex)
-        {
-            transform.Find("MenuScreen").gameObject.SetActive(false);
-            var newCurLvl = new CurrentLevel(newIndex, lvlFile.Levels[newIndex]);
-            DataSaver.saveData(newCurLvl, "currentLevel");
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-            GameManager.Instance.OnRestart();
-        }
-        else
-        {
-            nextButton.gameObject.SetActive(false);
-        }
 
     }
 

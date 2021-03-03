@@ -73,7 +73,13 @@ public class PlatformHandler : MonoBehaviour
 
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
-
+            if (timeSum >= (timeToLive + 0.3f))
+            {
+                foreach (var item in GetComponentsInChildren<Collider>())
+                {
+                    item.enabled = false;
+                }
+            }
 
         }
     }
