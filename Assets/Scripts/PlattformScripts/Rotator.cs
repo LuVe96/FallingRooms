@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotator : MonoBehaviour
+public class Rotator : BaseRotator
 {
 
     public float rotationSpeed = 1;
     private int random;
     private GameObject player = null;
+    private int dir;
 
     private void Start()
     {
-        random = Random.Range(0, 2);
+        //random = Random.Range(0, 2);
     }
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector4(0, 1, 0), ((random == 0) ? rotationSpeed : -rotationSpeed) * Time.deltaTime);
+        dir = (direction == Direction.Right) ? 1 : -1;
+        //transform.Rotate(new Vector4(0, 1, 0), ((random == 0) ? rotationSpeed : -rotationSpeed) * Time.deltaTime);
+        transform.Rotate(new Vector4(0, 1, 0), (dir * rotationSpeed) * Time.deltaTime);
 
         if (player != null)
         {

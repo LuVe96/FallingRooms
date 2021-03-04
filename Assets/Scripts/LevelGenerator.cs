@@ -59,6 +59,8 @@ public class LevelGenerator : MonoBehaviour
                             case "4": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 4f, 0); break;
                             case "5": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 5f, 0); break;
                             case "0": pf.transform.rotation = Quaternion.Euler(0, pf.transform.rotation.eulerAngles.y + 60 * 0f, 0); break;
+                            case "l": setDirectionToPlatform(Direction.Left, pf); break;
+                            case "r": setDirectionToPlatform(Direction.Right, pf); break;
                             default:
                                 break;
                         }
@@ -69,6 +71,7 @@ public class LevelGenerator : MonoBehaviour
                     
                 }
             }
+
 
             if (item.Length >= 4)
             {
@@ -94,6 +97,26 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+    }
+
+    private void setDirectionToPlatform(Direction dir, GameObject pf)
+    {
+        try
+        {
+            pf.GetComponent<BaseRotator>().setRotation(dir);
+        }
+        catch (Exception e)
+        { Debug.LogWarning(e);}
+
+        try
+        {
+            foreach (var item in pf.GetComponentsInChildren<BaseRotator>())
+            {
+                item.setRotation(dir);
+            }
+        }
+        catch (Exception e)
+        { Debug.LogWarning(e); }
     }
 
     private void shiftLine()

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserShockerSpinner : MonoBehaviour
+public class LaserShockerSpinner : BaseRotator
 {
     public float rotationTime = 1;
 
@@ -25,8 +25,9 @@ public class LaserShockerSpinner : MonoBehaviour
     {
 
         timeSum += Time.deltaTime;
+        rotationDir = (direction == Direction.Right) ? 0 : 1;
 
-        if(rotationTime <= timeSum)
+        if (rotationTime <= timeSum)
         {
             timeSum = 0;
             EnableLaser(currentIndex);

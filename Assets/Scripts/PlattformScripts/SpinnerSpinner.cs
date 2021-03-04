@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpinnerSpinner : MonoBehaviour
+public class SpinnerSpinner : BaseRotator
 {
     public float rotationSpeed = 1;
     private int random;
+    private int dir;
 
 
     private void Start()
@@ -15,7 +16,8 @@ public class SpinnerSpinner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector4(0, 1, 0), ((random == 0) ? rotationSpeed : -rotationSpeed) * Time.deltaTime);
+        dir = (direction == Direction.Right) ? 1 : -1;
+        transform.Rotate(new Vector4(0, 1, 0), (rotationSpeed * dir) * Time.deltaTime);
         //Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, rotationSpeed, 0) * Time.deltaTime);
         //GetComponent<Rigidbody>().MoveRotation(GetComponent<Rigidbody>().rotation * deltaRotation);
     }

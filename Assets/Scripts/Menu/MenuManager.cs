@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour
     public Sprite stdStar;
     public Sprite filledStar;
 
+    public Text levelNameText;
     public Text timeText;
     public Text shocksText;
     public Text pointsText;
@@ -79,9 +80,10 @@ public class MenuManager : MonoBehaviour
     private void setupWinScreen(Score score)
     {
         Time.timeScale = 0;
-        timeText.text = "Time: " + score.scoreTime; 
-        shocksText.text = "Shockes: " + score.scoreShocks;
-        pointsText.text = "Points: " + score.points;
+        levelNameText.text = FindObjectOfType<LevelGenerator>().currentLevel.Name;
+        timeText.text = "" + score.scoreTime; 
+        shocksText.text = "" + score.scoreShocks;
+        pointsText.text = "Score: " + score.points;
 
         updateScoreToFile(lvlScoreFile, score.stars);
         for (int i = 0; i < starImages.Length; i++)
@@ -134,6 +136,7 @@ public class MenuManager : MonoBehaviour
     private void setupLooseScreen()
     {
         Time.timeScale = 0;
+        levelNameText.text = "";
         timeText.text = "";
         shocksText.text = "";
         pointsText.text = "You are a Looser";
@@ -151,6 +154,7 @@ public class MenuManager : MonoBehaviour
     private void setupPauseScreen()
     {
         Time.timeScale = 0;
+        levelNameText.text = "";
         timeText.text = "";
         shocksText.text = "";
         pointsText.text = "Pause";
