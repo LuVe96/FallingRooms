@@ -18,6 +18,11 @@ public class MenuManager : MonoBehaviour
     public Text shocksText;
     public Text pointsText;
 
+    public GameObject scorePanel;
+    public Image mainImage;
+    public Sprite looseImage;
+    public Sprite pauseImage;
+
     public Button retryButton;
     public Button menuButton;
     public Button nextButton;
@@ -80,6 +85,8 @@ public class MenuManager : MonoBehaviour
     private void setupWinScreen(Score score)
     {
         Time.timeScale = 0;
+        scorePanel.SetActive(true);
+        mainImage.gameObject.SetActive(false);
         levelNameText.text = FindObjectOfType<LevelGenerator>().currentLevel.Name;
         timeText.text = "" + score.scoreTime; 
         shocksText.text = "" + score.scoreShocks;
@@ -136,10 +143,13 @@ public class MenuManager : MonoBehaviour
     private void setupLooseScreen()
     {
         Time.timeScale = 0;
-        levelNameText.text = "";
+        scorePanel.SetActive(false);
+        mainImage.gameObject.SetActive(true);
+        mainImage.sprite = looseImage;
+        levelNameText.text = "You are Death";
         timeText.text = "";
         shocksText.text = "";
-        pointsText.text = "You are a Looser";
+        pointsText.text = "";
 
         for (int i = 0; i < starImages.Length; i++)
         {
@@ -154,10 +164,13 @@ public class MenuManager : MonoBehaviour
     private void setupPauseScreen()
     {
         Time.timeScale = 0;
-        levelNameText.text = "";
+        scorePanel.SetActive(false);
+        mainImage.gameObject.SetActive(true);
+        mainImage.sprite = pauseImage;
+        levelNameText.text = "Pause";
         timeText.text = "";
         shocksText.text = "";
-        pointsText.text = "Pause";
+        pointsText.text = "";
 
         for (int i = 0; i < starImages.Length; i++)
         {

@@ -10,11 +10,13 @@ public class UiLevelPanelHandler : MonoBehaviour
     public Button btn;
     public Image[] stars;
     public Text nameText;
+    public Image bgImage;
 
     public Sprite stdStar;
     public Sprite filledStar;
     public Color selectedColor;
     public Color disabledColor;
+    public Color stdColor;
 
     public delegate void SelectButtonClicked(int index);
     public static SelectButtonClicked buttonClickDelegate;
@@ -22,20 +24,10 @@ public class UiLevelPanelHandler : MonoBehaviour
     private int index;
     private bool selected;
     private bool opened;
-    private Image btnImage;
-    private Color stdColor;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        btnImage = btn.GetComponent<Image>();
-        stdColor = btnImage.color;
-
-    }
 
     private void btnClicked()
     {
+        Debug.Log("btn Clicked");
         buttonClickDelegate(index);
     }
 
@@ -44,11 +36,11 @@ public class UiLevelPanelHandler : MonoBehaviour
     {
         if(selected)
         {
-            btnImage.color = selectedColor;
+            bgImage.color = selectedColor;
         }
         else
         {
-            btnImage.color = opened ? stdColor : disabledColor;
+            bgImage.color = opened ? stdColor : disabledColor;
         }
     }
 
