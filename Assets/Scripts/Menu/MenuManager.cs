@@ -110,7 +110,7 @@ public class MenuManager : MonoBehaviour
         retryButton.gameObject.SetActive(true);
         menuButton.gameObject.SetActive(true);
         nextButton.gameObject.SetActive(true);
-        nextButton.GetComponentInChildren<Text>().text = "Next Level";
+        nextButton.GetComponentInChildren<Text>().text = "Next";
     }
 
     private void updateScoreToFile(LevelScoreFile lvlFile, int stars)
@@ -146,7 +146,7 @@ public class MenuManager : MonoBehaviour
         scorePanel.SetActive(false);
         mainImage.gameObject.SetActive(true);
         mainImage.sprite = looseImage;
-        levelNameText.text = "You are Death";
+        levelNameText.text = "You are Dead";
         timeText.text = "";
         shocksText.text = "";
         pointsText.text = "";
