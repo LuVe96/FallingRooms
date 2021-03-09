@@ -38,7 +38,7 @@ public class LevelSelector : MonoBehaviour
         lvlsF = ReadLevelFile();
         lvlScoreFile = DataSaver.loadData<LevelScoreFile>("levelScores");
         uiLevelHandlers = new List<UiLevelPanelHandler>();
-        maxPages = (int)lvlsF.Levels.Length/8 +1;
+        maxPages = (int)(lvlsF.Levels.Length-1)/8 +1;
         currentSelecteLevel = lvlsF.Levels[0];
 
         UiLevelPanelHandler.buttonClickDelegate += AnyLevelSelcted;
@@ -111,6 +111,11 @@ public class LevelSelector : MonoBehaviour
             if (go.name != "LNB") Destroy(go);
         }
         uiLevelHandlers.Clear();
+
+        if (statIndex < lvlScoreFile.levelScores.Count)
+        {
+            nextOpenedLevelIndex = statIndex;
+        }
 
         for (int i = statIndex; i < endIndex; i++)
         {
