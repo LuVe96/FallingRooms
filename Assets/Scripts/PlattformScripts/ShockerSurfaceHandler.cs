@@ -12,6 +12,12 @@ public class ShockerSurfaceHandler : MonoBehaviour
     private float timeSum = 0;
     private bool switchDings = false;
 
+
+    private void Start()
+    {
+        middle.SetActive(true);
+        border.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
