@@ -51,7 +51,7 @@
     {
       "Name": "Level7",
       "RefTime": 90,
-      "ReqKeys": 3,
+      "ReqKeys": 2,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,break,shift,EMPT,shift,NOR,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,LSHl,shift,LSHl,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,LSHl,shift,EMPT,shift,LSHl,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,break,shift,KEY,shift,STT,shift,KEY,shift,GOL,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT ,break,shift,LSHr,shift,NOR,shift,LSHr,shift,NOR,shift,EMPT ,shift,EMPT ,shift,break,EMPT,shift,EMPT ,shift,LSHr,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT ,break,shift,LSHr,shift,EMPT,shift,EMPT ,shift,LSHr,shift,EMPT ,shift,EMPT ,shift,break,EMPT ,shift,LSHr,shift,EMPT,shift,LSHr,shift,EMPT ,shift,EMPT,shift,EMPT,break,shift,EMPT,shift,NOR,shift,NOR,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,LSHr,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,break"
     },
     {
