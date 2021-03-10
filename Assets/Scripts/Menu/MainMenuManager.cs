@@ -6,18 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     public GameObject lvlSelector;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject controlsMenu;
+    public GameObject tutorialMenu;
 
     public void ExitGame()
     {
@@ -27,5 +17,20 @@ public class MainMenuManager : MonoBehaviour
     public void StartLevelMenu()
     {
         lvlSelector.SetActive(true);
+    }
+
+    public void StartTutorialMenu()
+    {
+        tutorialMenu.SetActive(true);
+    }
+
+    public void OpenControlsMenu()
+    {
+        controlsMenu.SetActive(true);
+    }
+
+    public void CloseControlsMenu()
+    {
+        controlsMenu.SetActive(false);
     }
 }
