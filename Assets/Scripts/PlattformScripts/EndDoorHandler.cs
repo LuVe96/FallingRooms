@@ -71,13 +71,13 @@ public class EndDoorHandler : MonoBehaviour
                 {
                     //meshRenderer.material.color = openDoorColor;
                     Material[] mats1 = lightMeshRenderer.renderer.materials;
-                    mats[lightMeshRenderer.index] = light_geen;
+                    mats1[lightMeshRenderer.index] = light_geen;
                     lightMeshRenderer.renderer.materials = mats1;
                 }
                 else
                 {
                     Material[] mats1 = lightMeshRenderer.renderer.materials;
-                    mats[lightMeshRenderer.index] = light_std;
+                    mats1[lightMeshRenderer.index] = light_std;
                     lightMeshRenderer.renderer.materials = mats1;
                 }
 
@@ -86,6 +86,11 @@ public class EndDoorHandler : MonoBehaviour
         }
 
         if(opening) Destroy(gameObject);
+
+        yield return new WaitForSeconds(5);
+        Material[] mats2 = lightMeshRenderer.renderer.materials;
+        mats2[lightMeshRenderer.index] = light_std;
+        lightMeshRenderer.renderer.materials = mats2;
 
     }
 

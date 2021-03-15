@@ -2338,7 +2338,7 @@ RectTransform:
   - {fileID: 735792931}
   - {fileID: 625444466}
   m_Father: {fileID: 2090409831}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -3223,7 +3223,7 @@ RectTransform:
   m_Children:
   - {fileID: 1302680154}
   m_Father: {fileID: 2090409831}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3924,7 +3924,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8b0ce9f74491ac742aa3dd6c09e9dab7, type: 3}
     m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
@@ -4404,6 +4404,7 @@ GameObject:
   - component: {fileID: 2090409833}
   - component: {fileID: 2090409832}
   - component: {fileID: 2090409834}
+  - component: {fileID: 2090409835}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -4422,7 +4423,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3084903773200599833}
   - {fileID: 1229291889}
   - {fileID: 1420625133}
   m_Father: {fileID: 976996251}
@@ -4495,158 +4495,33 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!1001 &3084903773200599832
-PrefabInstance:
+--- !u!114 &2090409835
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2090409831}
-    m_Modifications:
-    - target: {fileID: 5013718439653585732, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013718439653585732, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013718439653585732, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -570
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477900888685203707, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477900888685203707, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477900888685203707, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -185
-      objectReference: {fileID: 0}
-    - target: {fileID: 8812584626535381197, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialPrefab
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e6a30fc9098206b4faf45f3ff31baaa1, type: 3}
---- !u!224 &3084903773200599833 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5182034971482417977, guid: e6a30fc9098206b4faf45f3ff31baaa1,
-    type: 3}
-  m_PrefabInstance: {fileID: 3084903773200599832}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090409830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d9ea26f98d50b4194281ed53f1e9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialItemContents:
+  - sprite: {fileID: 21300000, guid: ae43fff60fb006d46a6929a6685c047c, type: 3}
+    text: Das Spielfeld besteht aus hexagonalen Plattformen
+  - sprite: {fileID: 21300000, guid: 783784a102043dd4d8e4ff1b7dcf7aab, type: 3}
+    text: Das Spielfeld besteht aus hexagonalen Plattformen
+  - sprite: {fileID: 21300000, guid: 1b1029da8b9d66345a790dabd4139e9b, type: 3}
+    text: Das Spielfeld besteht aus hexagonalen Plattformen
+  - sprite: {fileID: 21300000, guid: 58040f0c3dd26c44c845d1e4272268c3, type: 3}
+    text: Das Spielfeld besteht aus hexagonalen Plattformen
+  - sprite: {fileID: 21300000, guid: 78c3b709f0c067a42bce7aec988e3dad, type: 3}
+    text: Das Spielfeld besteht aus hexagonalen Plattformen
+  - sprite: {fileID: 21300000, guid: 6d0a4d5fd27451440945ddc01a3c9e13, type: 3}
+    text: Das Spielfeld besteht aus hexagonalen Plattformen
+  tutorialItemPrafab: {fileID: 8812584626535381197, guid: e6a30fc9098206b4faf45f3ff31baaa1,
+    type: 3}
+  backBatton: {fileID: 1420625135}
+  lastButton: {fileID: 735792932}
+  nextButton: {fileID: 625444467}
