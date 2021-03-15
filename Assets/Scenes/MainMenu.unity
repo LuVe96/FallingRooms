@@ -3936,7 +3936,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exit '
+  m_Text: Exit
 --- !u!222 &1650655638
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4483,8 +4483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 20
+    m_Right: 20
     m_Top: 100
     m_Bottom: 0
   m_ChildAlignment: 1
@@ -4509,17 +4509,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialItemContents:
   - sprite: {fileID: 21300000, guid: ae43fff60fb006d46a6929a6685c047c, type: 3}
-    text: Das Spielfeld besteht aus hexagonalen Plattformen
+    text: Upon entering, white platforms will start falling after a short time.
   - sprite: {fileID: 21300000, guid: 783784a102043dd4d8e4ff1b7dcf7aab, type: 3}
-    text: Das Spielfeld besteht aus hexagonalen Plattformen
+    text: When the platform is blinking red, there will be only a few seconds left
+      befor it starts falling.
   - sprite: {fileID: 21300000, guid: 1b1029da8b9d66345a790dabd4139e9b, type: 3}
-    text: Das Spielfeld besteht aus hexagonalen Plattformen
+    text: Green platforms are a safe spots and won't fall.
   - sprite: {fileID: 21300000, guid: 58040f0c3dd26c44c845d1e4272268c3, type: 3}
-    text: Das Spielfeld besteht aus hexagonalen Plattformen
+    text: Key platforms contain keys which are requierd to unlock the final platform.
   - sprite: {fileID: 21300000, guid: 78c3b709f0c067a42bce7aec988e3dad, type: 3}
-    text: Das Spielfeld besteht aus hexagonalen Plattformen
+    text: Obstacles will slow you down or even stun you.
   - sprite: {fileID: 21300000, guid: 6d0a4d5fd27451440945ddc01a3c9e13, type: 3}
-    text: Das Spielfeld besteht aus hexagonalen Plattformen
+    text: The final platform will be locked until all keys are collected.
   tutorialItemPrafab: {fileID: 8812584626535381197, guid: e6a30fc9098206b4faf45f3ff31baaa1,
     type: 3}
   backBatton: {fileID: 1420625135}
