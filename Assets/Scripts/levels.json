@@ -1,112 +1,112 @@
 {
   "Levels": [
     {
-      "Name": "Level1",
+      "Name": "Level 1",
       "Image": "Level_1_small",
       "RefTime": 20,
       "ReqKeys": 1,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NOR,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,STT,shift,SPIr,shift,NOR,shift,EMPT ,shift,EMPT ,shift,break,EMPT ,shift,EMPT,shift,NOR,shift,NOR,shift,EMPT ,shift,EMPT ,shift,EMPT ,break,shift,EMPT ,shift,NOR,shift,SPIl,shift,KEY,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,NOR,shift,NOR,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,GOL,shift,SPIr,shift,NOR,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT,shift,NOR,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level2",
+      "Name": "Level 2",
       "Image": "Level_2_small",
       "RefTime": 30,
       "ReqKeys": 2,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,SHT,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,NOR,shift,SHT,shift,NOR,shift,EMPT,shift,break,EMPT,shift,SPIr,shift,SHT,shift,SPIr,shift,EMPT,shift,SPIl,shift,EMPT,break,shift,STT,shift,NOR,shift,KEY,shift,EMPT,shift,KEY,shift,GOL,shift,break,EMPT ,shift,SHT,shift,SPIl,shift,SHT,shift,EMPT ,shift,SHT,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,NOR,shift,SPIl,shift,NOR,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,SPIl,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level3",
+      "Name": "Level 3",
       "Image": "Level_3_small",
       "RefTime": 90,
       "ReqKeys": 4,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,GOL,shift,EMPT,shift,EMPT,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,BRD0,shift,EMPT ,shift,EMPT,shift,break,EMPT ,shift,EMPT,shift,SPIl,shift,EMPT ,shift,SPIr,shift,EMPT ,shift,EMPT ,break,shift,EMPT ,shift,KEY,shift,SPIl,shift,EMPT ,shift,KEY,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,SHT ,shift,BRD1,shift,SHT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,BRD1,shift,KEY,shift,BRD1,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,SHT ,shift,BRD1,shift,SHT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,KEY,shift,EMPT ,shift,SPIl,shift,KEY,shift,EMPT,shift,break,EMPT ,shift,EMPT,shift,SPIr,shift,EMPT ,shift,SPIl,shift,EMPT,shift,EMPT ,break,shift,EMPT,shift,EMPT ,shift,BRD0,shift,EMPT ,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT,shift,EMPT,shift,STT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level4",
+      "Name": "Level 4",
       "Image": "Level_4_small",
       "RefTime": 60,
       "ReqKeys": 3,
       "LevelString": "shift,EMPT,shift,NUTr,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,STT,shift,BRD0,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT ,shift,EMPT,shift,NOR,shift,SPIr,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,KEY,shift,BRD2,shift,NUTl,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,NOR,shift,EMPT ,shift,SHT ,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,KEY,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,NOR,shift,EMPT ,shift,SHT ,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,KEY,shift,BRD0,shift,NUTl,shift,EMPT ,shift,EMPT,break,shift,EMPT ,shift,EMPT,shift,NOR,shift,SPIr,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,GOL,shift,BRD2,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,NUTr,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level5",
+      "Name": "Level 5",
       "Image": "Level_5_small",
       "RefTime": 24,
       "ReqKeys": 2,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,ROTl,shift,EMPT,shift,ROTl,shift,EMPT,shift,GOL,break,shift,EMPT ,shift,ROTl,shift,ROTl,shift,ROTl,shift,ROTl,shift,ROTr,shift,break,EMPT ,shift,ROTl,shift,KEY,shift,NOR,shift,KEY,shift,ROTr,shift,EMPT ,break,shift,ROTl,shift,ROTr,shift,ROTr,shift,ROTr,shift,ROTr,shift,EMPT ,shift,break,STT,shift,EMPT,shift,ROTr,shift,EMPT,shift,ROTr,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level6",
+      "Name": "Level 6",
       "Image": "Level_6_small",
       "RefTime": 75,
       "ReqKeys": 5,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,GOL,shift,SPIl,shift,SPIl,shift,SPIl,shift,SPIl,shift,EMPT,shift,break,EMPT,shift,LSPr,shift,LSPr,shift,LSPr,shift,LSPr,shift,BRD0,shift,EMPT ,break,shift,EMPT,shift,BRD0,shift,EMPT,shift,BRD0,shift,EMPT,shift,BRD1,shift,break,EMPT,shift,EMPT,shift,KEY,shift,EMPT ,shift,KEY,shift,EMPT,shift,EMPT,break,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,KEY,shift,break,EMPT ,shift,KEY,shift,EMPT ,shift,KEY,shift,EMPT ,shift,EMPT,shift,EMPT,break,shift,EMPT,shift,BRD0,shift,EMPT,shift,BRD0,shift,EMPT,shift,BRD1,shift,break,EMPT,shift,LSPr,shift,LSPr,shift,LSPr,shift,LSPr,shift,BRD2,shift,EMPT,break,shift,STT,shift,SPIl,shift,SPIl,shift,SPIl,shift,SPIl,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,break,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break"
     },
     {
-      "Name": "Level7",
+      "Name": "Level 7",
       "Image": "Level_7_small",
       "RefTime": 90,
       "ReqKeys": 2,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,break,shift,EMPT,shift,NOR,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,LSHl,shift,LSHl,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,LSHl,shift,EMPT,shift,LSHl,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,break,shift,KEY,shift,STT,shift,KEY,shift,GOL,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT ,break,shift,LSHr,shift,NOR,shift,LSHr,shift,NOR,shift,EMPT ,shift,EMPT ,shift,break,EMPT,shift,EMPT ,shift,LSHr,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT ,break,shift,LSHr,shift,EMPT,shift,EMPT ,shift,LSHr,shift,EMPT ,shift,EMPT ,shift,break,EMPT ,shift,LSHr,shift,EMPT,shift,LSHr,shift,EMPT ,shift,EMPT,shift,EMPT,break,shift,EMPT,shift,NOR,shift,NOR,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,LSHr,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,break"
     },
     {
-      "Name": "Level8",
+      "Name": "Level 8",
       "Image": "Level_8_small",
       "RefTime": 50,
       "ReqKeys": 2,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,NOR,shift,EMPT,shift,KEY,shift,EMPT,shift,EMPT,shift,EMPT,break,shift,GUN ,shift,GUN ,shift,GUN ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,STT,shift,EMPT ,shift,SHT ,shift,GUN ,shift,ROTr,shift,EMPT,shift,GOL,break,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,GUN ,shift,GUN ,shift,GUN ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,KEY,shift,EMPT,shift,NUTl,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level9",
+      "Name": "Level 9",
       "Image": "Level_9_small",
       "RefTime": 40,
       "ReqKeys": 4,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,SHO ,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,KEY,shift,KEY,shift,EMPT ,shift,EMPT ,shift,break,EMPT ,shift,EMPT,shift,NUTr,shift,EMPT,shift,NUTr,shift,EMPT ,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,BRD0,shift,BRD2,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,GOL,shift,STT,shift,GOL,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,BRD2,shift,BRD0,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT,shift,NUTr,shift,EMPT ,shift,NUTr,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,KEY,shift,KEY,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,SHO ,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level10",
+      "Name": "Level 10",
       "Image": "Level_10_small",
       "RefTime": 40,
       "ReqKeys": 2,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,NOR,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,ROTr,shift,GUN ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,KEY,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,BRD2,shift,GUN ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,BRD2,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,BRD1,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,STT,shift,GOL,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,BRD1,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,BRD2,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,GUN ,shift,BRD2,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,KEY,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,GUN ,shift,ROTl,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,NOR,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level11",
+      "Name": "Level 11",
       "Image": "Level_11_small",
       "RefTime": 40,
       "ReqKeys": 2,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,STT,shift,ROTl,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,LSHr,shift,ROTl,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,LSHr,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT,shift,LSHr,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,KEY,shift,ROTl,shift,EMPT,shift,ROTl,shift,GOL,break,shift,EMPT,shift,EMPT,shift,LSPl,shift,ROTl,shift,ROTl,shift,LSPr,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,LSPl,shift,EMPT ,shift,LSPr,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,LSPl,shift,LSPr,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,KEY,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level12",
+      "Name": "Level 12",
       "Image": "Level_12_small",
       "RefTime": 50,
       "ReqKeys": 2,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,GUN ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,BRD2,shift,BRD0,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,BRD0,shift,EMPT,shift,NUTr,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,BRD2,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,KEY,shift,EMPT,shift,STT,shift,BRD1,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,BRD2,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,BRD1,shift,NUTr,shift,EMPT,shift,KEY,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,BRD0,shift,BRD2,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,NUTr,shift,EMPT,shift,GUN ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,BRD0,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,BRD2,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,BRD0,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,GOL,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break"
     },
     {
-      "Name": "Level13",
+      "Name": "Level 13",
       "Image": "Level_13_small",
       "RefTime": 50,
       "ReqKeys": 3,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,STT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,GOL,break,shift,SHO ,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,SHO ,shift,break,EMPT ,shift,BRD0,shift,EMPT,shift,EMPT,shift,EMPT ,shift,BRD2,shift,EMPT ,break,shift,EMPT,shift,BRD2,shift,EMPT ,shift,EMPT ,shift,BRD0,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,NUTl,shift,EMPT,shift,NUTl,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,LSPr,shift,LSPr,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,KEY,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,BRD2,shift,BRD0,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,KEY,shift,EMPT,shift,KEY,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,BRD0,shift,BRD2,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,GUN ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level14",
+      "Name": "Level 14",
       "Image": "Level_14_small",
       "RefTime": 80,
       "ReqKeys": 6,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,KEY,shift,EMPT ,shift,EMPT ,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,ROTr,shift,ROTr,shift,EMPT ,shift,EMPT ,shift,break,EMPT,shift,EMPT ,shift,ROTl,shift,GUN ,shift,ROTl,shift,EMPT ,shift,EMPT,break,shift,EMPT ,shift,KEY,shift,EMPT ,shift,EMPT ,shift,KEY,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,GUN ,shift,ROTr,shift,GUN ,shift,EMPT ,shift,EMPT ,break,shift,EMPT ,shift,ROTl,shift,STT,shift,ROTl,shift,ROTl,shift,EMPT ,shift,break,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,EMPT ,shift,ROTr,shift,ROTl,shift,GOL,shift,ROTr,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,GUN ,shift,ROTr,shift,GUN ,shift,EMPT ,shift,EMPT ,break,shift,EMPT ,shift,KEY,shift,EMPT ,shift,EMPT ,shift,KEY,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,ROTl,shift,GUN ,shift,ROTl,shift,EMPT ,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,ROTr,shift,ROTr,shift,EMPT ,shift,EMPT ,shift,break,EMPT,shift,EMPT ,shift,EMPT ,shift,KEY,shift,EMPT ,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level15",
+      "Name": "Level 15",
       "Image": "Level_15_small",
       "RefTime": 45,
       "ReqKeys": 6,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,SHO ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT,shift,KEY,shift,NUTr,shift,NUTr,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,KEY,shift,BRD2,shift,EMPT ,shift,LSPr,shift,BRD0,shift,EMPT,shift,break,STT,shift,GOL,shift,EMPT,shift,EMPT,shift,KEY,shift,KEY,shift,EMPT ,break,shift,KEY,shift,BRD0,shift,EMPT ,shift,LSPr,shift,BRD2,shift,EMPT ,shift,break,EMPT ,shift,KEY,shift,NUTl,shift,NUTl,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,SHO ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     },
     {
-      "Name": "Level16",
+      "Name": "Level 16",
       "Image": "Level_16_small",
       "RefTime": 365,
       "ReqKeys": 6,

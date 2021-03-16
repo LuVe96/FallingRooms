@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4509,18 +4509,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialItemContents:
   - sprite: {fileID: 21300000, guid: ae43fff60fb006d46a6929a6685c047c, type: 3}
-    text: Upon entering, white platforms will start falling after a short time.
+    text: Upon entering, white platforms will start falling after a short delay.
   - sprite: {fileID: 21300000, guid: 783784a102043dd4d8e4ff1b7dcf7aab, type: 3}
     text: When the platform is blinking red, there will be only a few seconds left
       befor it starts falling.
   - sprite: {fileID: 21300000, guid: 1b1029da8b9d66345a790dabd4139e9b, type: 3}
-    text: Green platforms are a safe spots and won't fall.
+    text: Green platforms are safe spots and won't fall.
   - sprite: {fileID: 21300000, guid: 58040f0c3dd26c44c845d1e4272268c3, type: 3}
     text: Key platforms contain keys which are requierd to unlock the final platform.
   - sprite: {fileID: 21300000, guid: 78c3b709f0c067a42bce7aec988e3dad, type: 3}
-    text: Obstacles will slow you down or even stun you.
+    text: Obstacles will slow you down or even stun you. Evade them with the right
+      timing or via jumping.
   - sprite: {fileID: 21300000, guid: 6d0a4d5fd27451440945ddc01a3c9e13, type: 3}
-    text: The final platform will be locked until all keys are collected.
+    text: The doors of the final platform will be locked until all keys are collected.
   tutorialItemPrafab: {fileID: 8812584626535381197, guid: e6a30fc9098206b4faf45f3ff31baaa1,
     type: 3}
   backBatton: {fileID: 1420625135}

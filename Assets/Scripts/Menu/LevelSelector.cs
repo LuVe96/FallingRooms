@@ -40,6 +40,7 @@ public class LevelSelector : MonoBehaviour
         uiLevelHandlers = new List<UiLevelPanelHandler>();
         maxPages = (int)(lvlsF.Levels.Length-1)/8 +1;
         currentSelecteLevel = lvlsF.Levels[0];
+        currentPage = 0;
 
         UiLevelPanelHandler.buttonClickDelegate += AnyLevelSelcted;
         startButton.onClick.AddListener(startButtonClicked);
