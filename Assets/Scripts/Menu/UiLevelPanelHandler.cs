@@ -11,6 +11,8 @@ public class UiLevelPanelHandler : MonoBehaviour
     public Image[] stars;
     public Text nameText;
     public Image bgImage;
+    public Image lvlImage;
+    public Sprite[] sprites;
 
     public Sprite stdStar;
     public Sprite filledStar;
@@ -50,6 +52,14 @@ public class UiLevelPanelHandler : MonoBehaviour
         this.selected = selected;
         this.opened = opened;
         nameText.text = lvl.Name;
+
+        foreach (var img in sprites)
+        {
+            if(img.name == lvl.Image)
+            {
+                lvlImage.sprite = img;
+            }
+        }
 
         if(opened)
         {

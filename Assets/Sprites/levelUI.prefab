@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
-  m_FillCenter: 1
+  m_FillCenter: 0
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
@@ -361,6 +361,24 @@ MonoBehaviour:
   - {fileID: 5620070727975667201}
   nameText: {fileID: 5620070726877758068}
   bgImage: {fileID: 7734909438212487618}
+  lvlImage: {fileID: 5620070727981316377}
+  sprites:
+  - {fileID: 21300000, guid: 6368267997d299247abf57d6770b7cf2, type: 3}
+  - {fileID: 21300000, guid: c1359d5e2c9178b4a809b8b003e0d4ca, type: 3}
+  - {fileID: 21300000, guid: b2345a29f9de337409d094a56581af62, type: 3}
+  - {fileID: 21300000, guid: f8cdd4d72f0bdc947908b82c13bb459e, type: 3}
+  - {fileID: 21300000, guid: ad645b9be77f6584a951b6fc17d573e9, type: 3}
+  - {fileID: 21300000, guid: 32641fc4cbc526d47937c19d7f7a6847, type: 3}
+  - {fileID: 21300000, guid: 983ea7a7eea31214196b28974f836c1f, type: 3}
+  - {fileID: 21300000, guid: f187530ca6f6ed045827ea03fcf53a87, type: 3}
+  - {fileID: 21300000, guid: ac469bc63a899704eb7bb3d4076f6fc3, type: 3}
+  - {fileID: 21300000, guid: 22dcb43916042b04d9a259ec05361412, type: 3}
+  - {fileID: 21300000, guid: ab8eacc92c7e4ae4d9edc355175ee414, type: 3}
+  - {fileID: 21300000, guid: 4c02e973f6d41444db52e1724411d499, type: 3}
+  - {fileID: 21300000, guid: 92d169c60c9ca4f47947b81a9e416037, type: 3}
+  - {fileID: 21300000, guid: fb81f9b0b7febd74c876e2aa60f17e87, type: 3}
+  - {fileID: 21300000, guid: 590357bd5d89d5c4782264e78dfa00ad, type: 3}
+  - {fileID: 21300000, guid: 504214277e492ef4dbbe100cec10a6a2, type: 3}
   stdStar: {fileID: 21300000, guid: d7e541cf411916444ad11aca105faf9a, type: 3}
   filledStar: {fileID: 21300000, guid: 42729632630d47b44a7eaaac605c3267, type: 3}
   selectedColor: {r: 1, g: 1, b: 1, a: 1}

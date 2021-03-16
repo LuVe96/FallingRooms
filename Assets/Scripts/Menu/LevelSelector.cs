@@ -183,6 +183,7 @@ public class LevelsFile
 public class Level
 {
     public string Name;
+    public string Image;
     public int RefTime;
     public int ReqKeys;
     public string LevelString;
@@ -197,6 +198,7 @@ public class CurrentLevel : Level
     {
         Index = index;
         Name = lvl.Name;
+        Image = lvl.Image;
         RefTime = lvl.RefTime;
         ReqKeys = lvl.ReqKeys;
         LevelString = lvl.LevelString;
