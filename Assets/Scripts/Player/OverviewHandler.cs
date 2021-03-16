@@ -126,7 +126,7 @@ public class OverviewHandler : MonoBehaviour
                 if (drohneIsFlying)
                 {
                     drohneIsFlying = false;
-                    StartCoroutine(landDrohne());
+                    //StartCoroutine(landDrohne());
                 }
 
 
@@ -139,27 +139,35 @@ public class OverviewHandler : MonoBehaviour
         buttonPressed = true;
         direction = (overviewPostition - stdPostion).normalized;
         inOverview = true;
+
+        StopAllCoroutines();
         StartCoroutine(startDrohne());
     }
 
     private void Overview_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         buttonPressed = false;
+        drohne.GetComponent<Animator>().SetBool("IsStarting", false);
+        drohne.GetComponent<Animator>().SetFloat("StartMultiplier", -1f);
+        StartCoroutine(landDrohne());
     }
 
     IEnumerator startDrohne()
     {
         drohne.SetActive(true);
+        drohne.GetComponent<Animator>().SetBool("IsStarting", true);
+        drohne.GetComponent<Animator>().SetFloat("StartMultiplier", 1f);
         drohne.GetComponent<Animator>().SetBool("IsFlying", true);
-        yield return new WaitForSeconds(1f/ drohne.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).speed);
+        yield return new WaitForSeconds(0.2f);
         drohneIsFlying = true;
 
     }
 
     IEnumerator landDrohne()
     {
+        yield return new WaitForSeconds(0.4f);
         drohne.GetComponent<Animator>().SetBool("IsFlying", false);
-        yield return new WaitForSeconds(1f / drohne.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).speed);
+        yield return new WaitForSeconds(0.7f);
         drohne.SetActive(false);
     }
 }
