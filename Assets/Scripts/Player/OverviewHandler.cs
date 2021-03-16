@@ -7,9 +7,11 @@ public class OverviewHandler : MonoBehaviour
 
     private Vector3 stdPostion;
     public Vector3 overviewPostition;
+    public GameObject drohne;
 
     private PlayerInputActions playerInputActions;
     private bool buttonPressed = false;
+    private bool drohneIsFlying = false;
     private Vector3 direction;
     private float timeSum = 0;
     private float duration = 2f;
@@ -80,7 +82,7 @@ public class OverviewHandler : MonoBehaviour
 
         for (int i = 0; i < divider; i++)
         {
-            if (buttonPressed)
+            if (buttonPressed && drohneIsFlying)
             {
 
                 if (transform.localPosition.y <= overviewPostition.y)
@@ -117,11 +119,17 @@ public class OverviewHandler : MonoBehaviour
 
         if (!buttonPressed)
         {
-           
             if (transform.localPosition.y <= 12)
             {
                 timeSum = 0;
                 inOverview = false;
+                if (drohneIsFlying)
+                {
+                    drohneIsFlying = false;
+                    StartCoroutine(landDrohne());
+                }
+
+
             }
         }
     }
@@ -131,12 +139,28 @@ public class OverviewHandler : MonoBehaviour
         buttonPressed = true;
         direction = (overviewPostition - stdPostion).normalized;
         inOverview = true;
-      
+        StartCoroutine(startDrohne());
     }
 
     private void Overview_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         buttonPressed = false;
+    }
+
+    IEnumerator startDrohne()
+    {
+        drohne.SetActive(true);
+        drohne.GetComponent<Animator>().SetBool("IsFlying", true);
+        yield return new WaitForSeconds(1f/ drohne.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).speed);
+        drohneIsFlying = true;
+
+    }
+
+    IEnumerator landDrohne()
+    {
+        drohne.GetComponent<Animator>().SetBool("IsFlying", false);
+        yield return new WaitForSeconds(1f / drohne.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).speed);
+        drohne.SetActive(false);
     }
 }
 
