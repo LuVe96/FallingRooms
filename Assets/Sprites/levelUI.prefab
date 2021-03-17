@@ -378,7 +378,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 92d169c60c9ca4f47947b81a9e416037, type: 3}
   - {fileID: 21300000, guid: fb81f9b0b7febd74c876e2aa60f17e87, type: 3}
   - {fileID: 21300000, guid: 590357bd5d89d5c4782264e78dfa00ad, type: 3}
-  - {fileID: 21300000, guid: 504214277e492ef4dbbe100cec10a6a2, type: 3}
+  - {fileID: 21300000, guid: 85a7627cbdd3f0d42841825abf2efcca, type: 3}
   stdStar: {fileID: 21300000, guid: d7e541cf411916444ad11aca105faf9a, type: 3}
   filledStar: {fileID: 21300000, guid: 42729632630d47b44a7eaaac605c3267, type: 3}
   selectedColor: {r: 1, g: 1, b: 1, a: 1}

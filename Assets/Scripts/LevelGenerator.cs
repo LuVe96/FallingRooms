@@ -11,6 +11,7 @@ public class LevelGenerator : MonoBehaviour
     public Transform parent;
     [HideInInspector]
     public CurrentLevel currentLevel;
+    public AudioClip[] audioclips;
 
     private Vector3 currPos;
     private float delta_z = 4.3326f; // 4.3326f;
@@ -27,6 +28,9 @@ public class LevelGenerator : MonoBehaviour
         FindObjectOfType<PointsManager>().refTime = currentLevel.RefTime;
         FindObjectOfType<PlayerHandler>().setRequredKeys(currentLevel.ReqKeys);
         createLevel();
+
+        GetComponent<AudioSource>().clip = audioclips[currentLevel.Song - 1];
+        GetComponent<AudioSource>().Play();
     }
 
     private void createLevel()

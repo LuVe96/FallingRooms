@@ -186,6 +186,7 @@ public class Level
 {
     public string Name;
     public string Image;
+    public int Song;
     public int RefTime;
     public int ReqKeys;
     public string LevelString;
@@ -201,6 +202,7 @@ public class CurrentLevel : Level
         Index = index;
         Name = lvl.Name;
         Image = lvl.Image;
+        Song = lvl.Song;
         RefTime = lvl.RefTime;
         ReqKeys = lvl.ReqKeys;
         LevelString = lvl.LevelString;

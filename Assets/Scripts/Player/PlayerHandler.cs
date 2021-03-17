@@ -9,6 +9,7 @@ public class PlayerHandler : MonoBehaviour
     public int currentKeysCount { get; private set; } = 0;
     public ParticleSystem shockParticle;
     public float shockDuration;
+    public AudioSource shockAudioSource;
 
     private GameObject[] keys;
     private ArrowHandler arrowHandler;
@@ -128,6 +129,7 @@ public class PlayerHandler : MonoBehaviour
     IEnumerator doShock()
     {
         shockParticle.gameObject.SetActive(true);
+        shockAudioSource.Play();
         GetComponent<PlayerMovement>().setShocked(true);
         isShocked = true;
 
