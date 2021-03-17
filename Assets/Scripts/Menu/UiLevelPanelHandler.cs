@@ -29,7 +29,6 @@ public class UiLevelPanelHandler : MonoBehaviour
 
     private void btnClicked()
     {
-        Debug.Log("btn Clicked");
         buttonClickDelegate(index);
     }
 

@@ -26,7 +26,7 @@ public class LevelSelector : MonoBehaviour
     private LevelsFile lvlsF;
     private LevelScoreFile lvlScoreFile;
     private List<UiLevelPanelHandler> uiLevelHandlers;
-    private int currentPage = 0;
+    private static int currentPage;
     private int maxPages;
 
     // Start is called before the first frame update
@@ -51,6 +51,7 @@ public class LevelSelector : MonoBehaviour
         updateNavigationButtons();
         createLevelUi(currentPage * itemsPerPage, currentPage * itemsPerPage + itemsPerPage);
     }
+
 
     public void ResetSaves()
     {
