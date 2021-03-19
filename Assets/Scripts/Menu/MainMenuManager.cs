@@ -7,6 +7,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public GameObject lvlSelector;
     public GameObject controlsMenu;
+    public GameObject creditsMenu;
     public GameObject tutorialMenu;
 
     public void ExitGame()
@@ -33,4 +34,15 @@ public class MainMenuManager : MonoBehaviour
     {
         controlsMenu.SetActive(false);
     }
+
+    public void OpenCreditsMenu()
+    {
+        creditsMenu.SetActive(true);
+    }
+
+    public void CloseCreditsMenu()
+    {
+        creditsMenu.SetActive(false);
+    }
+
 }

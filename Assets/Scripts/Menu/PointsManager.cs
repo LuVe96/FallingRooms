@@ -26,11 +26,17 @@ public class PointsManager : MonoBehaviour
         timeText.text = createTimeString(scoreTime);
     }
 
-    private string createTimeString(float seconds)
+    private string createTimeString(float seconds, bool useMS = false)
     {
         int s = (int)seconds % 60;
         int m = (int)seconds / 60;
-        string time = (m.ToString().Length < 2 ? "0" :"") + m + ":" + (s.ToString().Length < 2 ? "0" : "") + s;
+        int ms = (int)((seconds - (int)seconds) * 100);
+        string time = (m.ToString().Length < 2 ? "0" : "") + m + ":" + (s.ToString().Length < 2 ? "0" : "") + s;
+        if (useMS)
+        {
+            time += ":" + (ms.ToString().Length < 2 ? "0" : "") + ms;
+        }
+      
         return time;
     }
 
@@ -71,7 +77,7 @@ public class PointsManager : MonoBehaviour
             stars = 3;
         }
 
-        return new Score(createTimeString( scoreTime), scoreShocks, points, stars);
+        return new Score(createTimeString( scoreTime, true), scoreShocks, points, stars);
     }
 
     public struct Score

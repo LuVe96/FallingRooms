@@ -124,7 +124,7 @@
       "Name": "Level 16",
       "Image": "Level_16_small",
       "Song": 1,
-      "RefTime": 65,
+      "RefTime": 70,
       "ReqKeys": 6,
       "LevelString": "shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,BRD2,shift,EMPT,shift,BRD0,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,KEY,shift,ROTr,shift,ROTr,shift,KEY,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,BRD1,shift,ROTl,shift,BRD1,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,BRD2,shift,BRD0,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,BRD2,shift,NOR,shift,BRD0,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,NOR,shift,NOR,shift,LSPr,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,KEY,shift,STT,shift,KEY,shift,GOL,shift,EMPT ,break,shift,EMPT,shift,EMPT,shift,NOR,shift,NOR,shift,LSPl,shift,EMPT ,shift,break,EMPT,shift,EMPT,shift,BRD0,shift,NOR,shift,BRD2,shift,EMPT ,shift,EMPT,break,shift,EMPT,shift,EMPT,shift,BRD0,shift,BRD2,shift,EMPT,shift,EMPT,shift,break,EMPT ,shift,EMPT ,shift,BRD1,shift,ROTl,shift,BRD1,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,KEY,shift,ROTr,shift,ROTr,shift,KEY,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,BRD0,shift,EMPT,shift,BRD2,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,shift,break,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT,shift,EMPT ,break,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT ,shift,EMPT,shift,EMPT ,shift,break"
     }

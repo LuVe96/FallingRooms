@@ -54,10 +54,16 @@ public class MenuManager : MonoBehaviour
         playerInputActions.Disable();
     }
 
+    public void Pause()
+    {
+        currentMenuType = MenuType.Pause;
+        transform.Find("MenuScreen").gameObject.SetActive(true);
+        setupPauseScreen();
+    }
 
     private void PauseMenuOpen(InputAction.CallbackContext obj)
     {
-       
+  
         currentMenuType = MenuType.Pause;
         transform.Find("MenuScreen").gameObject.SetActive(true);
         setupPauseScreen();

@@ -10,6 +10,7 @@ public class PlayerHandler : MonoBehaviour
     public ParticleSystem shockParticle;
     public float shockDuration;
     public AudioSource shockAudioSource;
+    public AudioSource keyAudioSource;
 
     private GameObject[] keys;
     private ArrowHandler arrowHandler;
@@ -111,6 +112,7 @@ public class PlayerHandler : MonoBehaviour
         {
             currentKeysCount += 1;
             Destroy(other.gameObject);
+            keyAudioSource.Play();
             GameObject.Find("KeyPanel").GetComponent<KeyPanel>().UpdateKeys(currentKeysCount);
         }
 
