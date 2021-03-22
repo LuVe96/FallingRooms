@@ -18,6 +18,7 @@ public class MenuManager : MonoBehaviour
     public Text shocksText;
     public Text pointsText;
 
+    public GameObject menu;
     public GameObject scorePanel;
     public Image mainImage;
     public Sprite looseImage;
@@ -210,7 +211,8 @@ public class MenuManager : MonoBehaviour
             }
         }else
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            //UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            menu.SetActive(false);
         }
 
         currentMenuType = MenuType.None;
