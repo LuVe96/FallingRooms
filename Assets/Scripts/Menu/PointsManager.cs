@@ -66,7 +66,7 @@ public class PointsManager : MonoBehaviour
                 break;
         }
 
-        if(points < 4000)
+        if(points < 4500)
         {
             stars = 1;
         } else if(points < 6000)
