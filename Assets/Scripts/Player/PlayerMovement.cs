@@ -49,9 +49,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isFalling) { return; }
+        if (isFalling && transform.position.y < 0.20) { return; }
 
-        if(!IsGrounded() && coliding) { return; }
+        if (!IsGrounded() && coliding && transform.position.y > 0.01) { return; }
 
         if (isShocked)
         {
