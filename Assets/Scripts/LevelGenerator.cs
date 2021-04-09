@@ -82,14 +82,6 @@ public class LevelGenerator : MonoBehaviour
                 switch (item.Substring(0, 4))
                 {
                     case "brea":
-                        //evenLine = !evenLine;
-                        //if (evenLine)
-                        //{
-                        //    currPos = new Vector3(0, 0, currPos.z - delta_z);
-                        //} else
-                        //{
-                        //    currPos = new Vector3(-delta_x/2, 0, currPos.z - delta_z);
-                        //}
                         currPos = new Vector3(0, 0, currPos.z - delta_z);
                         break;
                     case "EMPT": currPos += new Vector3(delta_x, 0, 0); break;

@@ -56,15 +56,6 @@ public class PlayerHandler : MonoBehaviour
             }
         }
 
-        //if (currentKeysCount < requiredeKeysCount && nearestKey != null)
-        //{
-        //    arrowHandler.setKeyGoal(nearestKey.transform);
-        //}
-        //else
-        //{
-        //    arrowHandler.setKeyGoal(null);
-        //}
-
         if (InvincibilityModeisActive)
         {
             blinkTimeSum += Time.deltaTime;

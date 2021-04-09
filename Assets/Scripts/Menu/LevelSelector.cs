@@ -32,6 +32,7 @@ public class LevelSelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Path: " + Path.Combine(Application.persistentDataPath, "data"));
         ///
         //ResetSaves();
         ///
@@ -114,10 +115,14 @@ public class LevelSelector : MonoBehaviour
         }
         uiLevelHandlers.Clear();
 
-        if (statIndex < lvlScoreFile.levelScores.Count)
+        if(lvlScoreFile != null)
         {
-            nextOpenedLevelIndex = statIndex;
+            if (statIndex < lvlScoreFile.levelScores.Count)
+            {
+                nextOpenedLevelIndex = statIndex;
+            }
         }
+
 
         for (int i = statIndex; i < endIndex; i++)
         {

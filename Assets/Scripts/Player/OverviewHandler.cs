@@ -29,8 +29,6 @@ public class OverviewHandler : MonoBehaviour
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Overview.started += Overview_started;
         playerInputActions.Player.Overview.canceled += Overview_canceled;
-
-        //overviewPostition = new Vector3(PlatformsTransform.position.x / 2, overviewPostition.y, PlatformsTransform.position.z + overviewPostition.z);
     }
 
     private void OnEnable()
@@ -46,36 +44,6 @@ public class OverviewHandler : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        //if (inOverview)
-        //{
-        //    if (buttonPressed)
-        //    {
-        //        if (transform.position.y >= overviewPostition.y && transform.position.z <= overviewPostition.z)
-        //        {
-        //            timeSum = 0;
-        //        }
-        //        else
-        //        {
-        //            timeSum += Time.deltaTime;
-        //            Vector3 newPos = Vector3.Lerp(stdPostion, overviewPostition, timeSum / duration);
-        //            transform.localPosition = newPos;
-        //        }
-
-        //    }
-        //    else
-        //    {
-        //        if (transform.position.y <= stdPostion.y && transform.position.z >= stdPostion.z)
-        //        {
-        //            timeSum = 0;
-        //        }
-        //        else
-        //        {
-        //            timeSum += Time.deltaTime;
-        //            Vector3 newPos = Vector3.Lerp(overviewPostition, stdPostion, timeSum / duration);
-        //            transform.localPosition = newPos;
-        //        }
-        //    }
-        //}
 
         int divider = 10;
         //float speed = 20 * Time.deltaTime;
@@ -93,10 +61,7 @@ public class OverviewHandler : MonoBehaviour
                 {
                     transform.localPosition += new Vector3(0, 0, direction.z * speedUp * Time.fixedDeltaTime / divider);
                 }
-                //if (transform.localPosition.x <= overviewPostition.x)
-                //{
-                //    transform.localPosition += new Vector3(direction.x * speedUp * Time.deltaTime / divider, 0, 0);
-                //}
+
             }
             else
             {
@@ -108,10 +73,7 @@ public class OverviewHandler : MonoBehaviour
                 {
                     transform.localPosition -= new Vector3(0, 0, direction.z * speedDown * Time.fixedDeltaTime / divider);
                 }
-                //if (transform.localPosition.x >= stdPostion.x)
-                //{
-                //    transform.localPosition -= new Vector3(direction.x * speedUp * Time.deltaTime / divider, 0, 0);
-                //}
+
             }
         }
 
@@ -171,67 +133,3 @@ public class OverviewHandler : MonoBehaviour
         drohne.SetActive(false);
     }
 }
-
-
-//if (buttonPressed)
-//            {
-//                if (transform.position.y <= overviewPostition.y)
-//                {
-//                    transform.position += new Vector3(0, direction.y* speed / divider, 0);
-//                }
-//                if(transform.position.z >= overviewPostition.z)
-//                {
-//                    transform.position += new Vector3(0,0, direction.z* speed / divider);
-//                }
-//            }
-//            else
-//            {
-//                if (transform.position.y >= stdPostion.y)
-//                {
-//                    transform.position -= new Vector3(0, direction.y* speed / divider, 0);
-//                }
-//                if (transform.position.z <= stdPostion.z)
-//                {
-//                    transform.position -= new Vector3(0, 0, direction.z* speed / divider);
-//                }
-
-//            }       
-
-
-//int divider = 10;
-//        //float speed = 20 * Time.deltaTime;
-
-//        for (int i = 0; i<divider; i++)
-//        {
-//            if (buttonPressed)
-//            {
-
-//                if (transform.localPosition.y <= overviewPostition.y)
-//                {
-//                    transform.localPosition += new Vector3(0, direction.y* speedUp * Time.fixedDeltaTime / divider, 0);
-//                }
-//                if (transform.localPosition.z >= overviewPostition.z)
-//                {
-//                    transform.localPosition += new Vector3(0, 0, direction.z* speedUp * Time.fixedDeltaTime / divider);
-//                }
-//                //if (transform.localPosition.x <= overviewPostition.x)
-//                //{
-//                //    transform.localPosition += new Vector3(direction.x * speedUp * Time.deltaTime / divider, 0, 0);
-//                //}
-//            }
-//            else
-//            {
-//                if (transform.localPosition.y >= stdPostion.y)
-//                {
-//                    transform.localPosition -= new Vector3(0, direction.y* speedDown * Time.fixedDeltaTime / divider, 0);
-//                }
-//                if (transform.localPosition.z <= stdPostion.z)
-//                {
-//                    transform.localPosition -= new Vector3(0, 0, direction.z* speedDown * Time.fixedDeltaTime / divider);
-//                }
-//                //if (transform.localPosition.x >= stdPostion.x)
-//                //{
-//                //    transform.localPosition -= new Vector3(direction.x * speedUp * Time.deltaTime / divider, 0, 0);
-//                //}
-//            }
-//        }
